@@ -1,0 +1,118 @@
+\documentclass[border=3mm]{standalone}
+\usepackage[rgb]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes.gates.logic.US,shapes.gates.logic.IEC,calc}
+
+
+\pgfmathdeclarerandomlist{MyRandomColors}{
+	{black} 
+	{blue}
+	{brown}
+	{cyan}
+	{gray}
+	{green}
+	{lime}
+	{magenta}
+	{olive}
+	{orange}
+	{pink}
+	{purple}
+	{red}
+	{teal}
+	{violet}
+	{white}
+	{yellow}
+}
+
+\begin{document}
+	\thispagestyle{empty}
+	\tikzstyle{branch}=[fill,shape=circle,minimum size=3pt,inner sep=0pt]
+	
+	\def\prunelist#1{%
+		\expandafter\edef\csname pgfmath@randomlist@#1\endcsname
+		{\the\numexpr\csname pgfmath@randomlist@#1\endcsname-1\relax}
+		\count@\pgfmath@randomtemp 
+		\loop
+		\expandafter\let
+		\csname pgfmath@randomlist@#1@\the\count@\expandafter\endcsname
+		\csname pgfmath@randomlist@#1@\the\numexpr\count@+1\relax\endcsname
+		\ifnum\count@<\csname pgfmath@randomlist@#1\endcsname\relax
+		\advance\count@\@ne
+		\repeat}
+	
+
+	\begin{tikzpicture}[label distance=2mm]
+	
+	\node (x2) at (6,10) {$x_2$};
+	\node (x3) at (-2,10) {$x_3$};
+	\node (x1) at (-2,9) {$x_1$};
+	\node (x0) at (0,7.5) {$x_0$};
+	\node (x0c) at (3,7) {$x_0$};
+	\node (x1c) at (2,6) {$x_1$};
+	\node (x3c) at (2,5) {$x_3$};
+	\pgfmathsetseed{128}
+
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[not gate US, draw, logic gate inputs=nn, fill=black] at ($(x3)+(1,0)$) (g14) {};
+	\node[not gate US, draw, logic gate inputs=nn, fill=blue] at ($(x1)+(1,0)$) (g16) {};
+	\node[nor gate US, draw, logic gate inputs=nn, fill=brown] at ($(g14)+(1,-0.5)$) (g13) {};
+	\node[nor gate US, draw, logic gate inputs=nn, fill=cyan] at ($(g13)+(1,-1)$) (g10) {};
+	\node[nor gate US, draw, logic gate inputs=nn, fill=green] at ($(g13)+(4,0.5)$) (g12) {};
+	\node[nor gate US, draw, logic gate inputs=nn, fill=lime] at ($(g12)+(1,-1.375)$) (g11) {};
+	\node[nor gate US, draw, logic gate inputs=nn, fill=magenta] at ($(x0c)+(1,-0.75)$) (g17) {};
+	\node[nor gate US, draw, logic gate inputs=nn, fill=olive] at ($(x1c)+(1,-0.5)$) (g9) {};
+	\node[nor gate US, draw, logic gate inputs=nn, fill=orange] at ($(x2)+(1,-0.5)$) (g6) {};
+	\draw (x3) |- (g14.input);
+	\draw (x1) |- (g16.input);
+	\draw (g14.output) |- (g13.input 1);
+	\draw (g16.output) |- (g13.input 2);
+	\draw (x0) |- (g10.input 2);
+	\draw (g13.output) |- (g10.input 1);
+	\draw (g13.output) |- (g12.input 1);
+	\draw (g10.output) |- (g12.input 2);
+	\draw (g12.output) |- (g11.input 1);
+	\draw (g17.output) |- (g11.input 2);
+	\draw (x0c) |- (g17.input 1);
+	\draw (x1c) |- (g9.input 1);
+	\draw (x3c) |- (g9.input 2);
+	\draw (g9.output) |- (g17.input 2);
+	\draw (x2) |- (g6.input 1);
+	\draw (g11.output) |- (g6.input 2);
+	
+	%\node (x0d) at (4,3) {$x_0$};
+	%\node (x3e) at (2,2.5) {$x_3$};
+	%\node (x1e) at (2,1.5) {$x_1$};
+
+	%\node[nor gate US, draw, logic gate inputs=nn, fill=yellow] at ($(5,2.5)$) (g10b) {};
+	%\node[not gate US, draw, logic gate inputs=nn, fill=\RandomColor] at ($(x3e)+(1,0)$) (g11c) {};
+	%\node[not gate US, draw, logic gate inputs=nn, fill=\RandomColor] at ($(x1e)+(1,0)$) (g16c) {};
+	%\node[nor gate US, draw, logic gate inputs=nn, fill=\RandomColor] at ($(g16c)+(1,0.5)$) (g13c) {};
+	\node[nor gate US, draw, logic gate inputs=nn, fill=pink] at ($(5,4.5)+(1,0)$) (g8c) {};
+	%\draw (x3e) |- (g11c.input);
+	%\draw (x1e) |- (g16c.input);
+	%\draw (g11c.output) |- (g13c.input 1);
+	%\draw (g16c.output) |- (g13c.input 2);
+	%\draw (x0d) |- (g10b.input 1);
+	%\draw (g13c.output) |- (g10b.input 2);
+	\draw (g9.output) |- (g8c.input 1);
+	\draw (g10.output) |- (g8c.input 2);
+	
+
+	\node (x2et) at (6,2.5) {$x_2$};
+	\node[nor gate US, draw, logic gate inputs=nn, fill=purple] at ($(x2et)+(2,1)$) (g15t) {};
+
+	\draw (g8c.output) |- (g15t.input 1);
+	\draw (x2et) |- (g15t.input 2);
+	
+	\node[nor gate US, draw, logic gate inputs=nn, fill=red] at ($(g15t)+(2,3.5)$) (g4) {};
+	\node[nor gate US, draw, logic gate inputs=nn, fill=teal] at ($(g8c)+(1,2)$) (g7) {};
+	\draw (g15t.output) |-  (g4.input 2);
+	\draw (g8c.output) |- (g7.input 2);
+	\draw (g11.output) |- (g7.input 1);
+	\node[nor gate US, draw, logic gate inputs=nn, fill=yellow] at ($(g6)+(1,-1.5)$) (g5) {};
+	\draw (g6.output)|- (g5.input 1);
+	\draw (g7.output)|- (g5.input 2);
+	\draw (g5.output)|- (g4.input 1);
+	
+	\end{tikzpicture}
+\end{document} 

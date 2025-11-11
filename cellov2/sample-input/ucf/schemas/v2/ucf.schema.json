@@ -1,0 +1,23 @@
+{
+	"$id": "ucf.schema.json",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "ucf",
+	"description": "A UCF object.",
+	"type": "array",
+	"items": {
+		"anyOf": [
+			{ "$ref": "file:header.schema.json" },
+			{ "$ref": "file:measurement_std.schema.json" },
+			{ "$ref": "file:logic_constraints.schema.json" },
+			{ "$ref": "file:motif_library.schema.json" },
+			{ "$ref": "file:gates.schema.json" },
+			{ "$ref": "file:models.schema.json" },
+			{ "$ref": "file:structures.schema.json" },
+			{ "$ref": "file:functions.schema.json" },
+			{ "$ref": "file:parts.schema.json" },
+			{ "$ref": "file:circuit_rules.schema.json" },
+			{ "$ref": "file:device_rules.schema.json" },
+			{ "$ref": "file:genetic_locations.schema.json" }
+		]
+	}
+}

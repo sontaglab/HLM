@@ -1,0 +1,12 @@
+# Benchmark "rca2" written by ABC on Wed May 13 05:45:07 2020
+INPUT(a)
+INPUT(b)
+INPUT(c)
+INPUT(d)
+OUTPUT(s)
+new_n6_     = NOT(a)
+new_n7_     = NOT(d)
+new_n8_     = AND(new_n6_, new_n7_)
+new_n9_     = AND(c, new_n8_)
+new_n10_    = NOT(new_n9_)
+s           = AND(b, new_n10_)

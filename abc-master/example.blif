@@ -1,0 +1,12 @@
+# Benchmark "example" written by ABC on Tue May 12 01:55:29 2020
+.model example
+.inputs a b c d
+.outputs f3
+.names b a new_f1_
+01 0
+.names c d new_f2_
+11 0
+.names new_f1_ new_f2_ f3
+01 1
+10 1
+.end

@@ -1,0 +1,88 @@
+digraph parity3 {
+label="parity3"
+rankdir="LR"
+remincross=true
+splines=ortho
+{rank = same; "a";"b";"c";}
+{rank = same; "y";}
+"a" [shape=octagon, label="a
+PRIMARY_INPUT
+LacI_sensor"]
+"aPoint" [ shape=point ]
+"a" -> "aPoint":w
+"b" [shape=octagon, label="b
+PRIMARY_INPUT
+TetR_sensor"]
+"bPoint" [ shape=point ]
+"b" -> "bPoint":w
+"c" [shape=octagon, label="c
+PRIMARY_INPUT
+AraC_sensor"]
+"cPoint" [ shape=point ]
+"c" -> "cPoint":w
+"y" [shape=octagon, label="y
+PRIMARY_OUTPUT
+YFP_reporter"]
+"$78" [shape=box, label="$78
+NOT
+N1_LmrA"]
+"$89" [shape=box, label="$89
+NOR
+Q1_QacR"]
+"$79" [shape=box, label="$79
+NOT
+R1_PsrA"]
+"$79Point" [ shape=point ]
+"$79" -> "$79Point":w
+"$85" [shape=box, label="$85
+NOR
+I1_IcaRA"]
+"$86" [shape=box, label="$86
+NOR
+L1_LitR"]
+"$87" [shape=box, label="$87
+NOR
+A1_AmtR"]
+"$88" [shape=box, label="$88
+NOR
+S4_SrpR"]
+"$81" [shape=box, label="$81
+NOR
+H1_HlyIIR"]
+"$82" [shape=box, label="$82
+NOR
+P3_PhlF"]
+"$83" [shape=box, label="$83
+NOR
+B2_BM3R1"]
+"$84" [shape=box, label="$84
+NOR
+F1_AmeR"]
+"$80" [shape=box, label="$80
+NOT
+E1_BetI"]
+"$80Point" [ shape=point ]
+"$80" -> "$80Point":w
+"aPoint":e -> "$78"
+"aPoint":e -> "$88"
+"bPoint":e -> "$81"
+"bPoint":e -> "$84"
+"bPoint":e -> "$80"
+"$88" -> "$89"
+"cPoint":e -> "$79"
+"cPoint":e -> "$81"
+"cPoint":e -> "$83"
+"$87" -> "$89"
+"$82" -> "$85"
+"$86" -> "$87"
+"$81" -> "$85"
+"$85" -> "$88"
+"$84" -> "$86"
+"$78" -> "$87"
+"$80Point":e -> "$82"
+"$80Point":e -> "$83"
+"$79Point":e -> "$82"
+"$79Point":e -> "$84"
+"$83" -> "$86"
+"$89" -> "y"
+}

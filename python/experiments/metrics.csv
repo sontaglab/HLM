@@ -1,0 +1,7 @@
+circuit,pipeline,gates,score,status
+majority3,baseline,,,missing log
+majority3,hlm,,,missing log
+parity3,baseline,,,missing log
+parity3,hlm,,,missing log
+four_input_combo,baseline,,,missing log
+four_input_combo,hlm,,,missing log

@@ -1,0 +1,184 @@
+function [] = build_tree(graphs,index,nb_inputs,maxgates,permutation,offending)
+    load('summary.mat')
+
+    for i = 1:(maxgates(index)+nb_inputs)
+        if i <= nb_inputs
+            var_names{i,1} = sprintf('x_%i',permutation(i)-1); 
+        else
+            var_names{i,1} = sprintf('g_%i',i-1);
+        end
+    end
+
+    var_count = zeros(length(var_names),1);
+    find_counts = cell(size(graphs,2),3);
+    var_loc = cell(length(var_names),2);
+    for i = 1:size(graphs,2)
+        for j = 1:length(var_names)
+            if ~isempty(graphs{index,i})
+                find_counts{i,1} = [find_counts{i,1} strfind(graphs{index,i},var_names{j})];
+                find_counts{i,2} = unique([find_counts{i,2} strfind(graphs{index,i},'/ \')]);
+                find_counts{i,3} = unique([find_counts{i,3} strfind(graphs{index,i},' | ')]);
+                if strfind(graphs{index,i},var_names{j}) 
+                    var_loc{j,1} = [var_loc{j,1} repmat(i,length(strfind(graphs{index,i},var_names{j})),1)'];
+                    var_loc{j,2} = [var_loc{j,2} strfind(graphs{index,i},var_names{j})];
+                    var_count(j) = var_count(j) + 1;
+                end
+            end
+        end
+    end
+
+    counter = 0;
+    for i = 1:size(var_loc,1)
+        for j = 1:length(var_loc{i,1})
+            counter = counter + 1;
+            node_ranking(counter,:) = [i,var_loc{i,1}(j)+var_loc{i,2}(j)/100];
+        end
+    end
+    for i = 1:length(var_names)
+       if strfind(var_names{i,1},'g_')
+            var_names{i,1}=strrep(var_names{i,1},'g_','g_{');
+            var_names{i,1} = strcat(var_names{i,1},'}');
+       end
+    end
+    [~,inx]=sort(node_ranking(:,2));
+    node_ranking = node_ranking(inx,:);
+    nodes_names = cell(size(node_ranking,1),1);
+
+    nodes  = zeros(sum(var_count),1)';
+    counter = 1;
+    node_count = zeros(size(find_counts,1),1);
+    for i = 1:size(find_counts,1)
+       node_count(i) = length(find_counts{i,1});
+    end
+    node_count(:,2) = cumsum(node_count);
+
+    sum_varcounts = cumsum(var_count);
+    for i = 2:2:size(find_counts,1)-1
+        nb_1conn = length(find_counts{i,3});
+        nb_2conn = length(find_counts{i,2});
+
+        all_conn = [find_counts{i,3}' ones(length(find_counts{i,3}),1);
+                    find_counts{i,2}' ones(length(find_counts{i,2}),1)*2];
+
+        [~,inx]=sort(all_conn(:,1));
+        all_conn = all_conn(inx,:);
+
+        for j = 1:size(all_conn,1)
+            if all_conn(j,2) == 1
+                counter = counter + 1;
+                [~,index_1conn] = min(abs(sort(find_counts{i-1,1}) - all_conn(j,1)));
+                nodes(counter) = node_count(i-1,2) - node_count(i-1,1) + index_1conn;
+            else
+                for k = 1:2
+                    counter = counter + 1;
+                    %sort(find_counts{i-1,1}) - find_counts{i,2}(j)
+                    [~,index_2conn] = min(abs(sort(find_counts{i-1,1}) - all_conn(j,1)));
+                    nodes(counter) = node_count(i-1,2) - node_count(i-1,1) + index_2conn;
+                end
+            end
+        end
+    end
+
+    for i = 1:size(node_ranking,1)
+        nodes_names{i,1} = var_names{node_ranking(i,1),1};
+    end
+    
+    for i = 1:length(nodes)
+        if ~isempty((strfind(nodes_names{i,1},'x_')))
+            terminal(i) = 1;
+        else
+            terminal(i) = 0;
+        end
+    end
+    gates = 1 - terminal;
+    gates_number = zeros(1,length(gates));
+    unique_nodes = unique(nodes);
+    for i = 1:length(unique_nodes)
+        idx = find(nodes == unique_nodes(i));
+        idx_vect = zeros(length(idx),1);
+        if all(terminal(idx) == 1)
+            gates_number(unique_nodes(i)) = 1;
+            gates(unique_nodes(i)) = 0;
+            terminal(unique_nodes(i)) = 1;
+            for j = 1:length(nodes)
+                if strcmp(nodes_names{unique_nodes(i),1},nodes_names{j,1})
+                   gates_number(j) = 1; 
+                   gates(j) = 0;
+                end
+            end
+            
+        end
+    end
+    for i = 1:length(nodes)
+       if gates_number(i) == 1
+          terminal(i) = 1;
+       end
+    end
+    for k = 1:100
+        for i = 1:length(nodes)
+            if gates(i) == 0
+               terminal(i) = 1; 
+            end
+            if gates(i) > 0
+                idx = find(nodes == i);
+                if ~isempty(idx)
+                    if all(terminal(idx) == 1) %&& (nodes(i)>0)
+                        gates_number(i) =  gates_number(i) + 1;
+                        for j = 1:length(idx)
+                           gates_number(i) =  gates_number(i) + gates_number(idx(j));
+                        end
+                        gates(i) = 0;
+                        for j = 1:length(nodes)
+                            if strcmp(nodes_names{i,1},nodes_names{j,1})
+                               gates_number(j) = gates_number(i); 
+                               gates(j) = 0;
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+    fprintf('Total NOR gates with repeats: %i \n',gates_number(1))
+    exclude = {};
+    nb_items = 0;
+    for i = 1:length(gates)
+       if gates_number(i) > 0 && gates_number(i) < 8
+            gates_nb = gates_number(i);
+            idx = [];
+            for j = 1:length(gates)
+               if strcmp(nodes_names{i,1},nodes_names{j,1})
+                   idx = [idx,j];
+               end
+            end
+            final_gatenb = gates_number(1)-length(idx)*gates_nb;
+            if (final_gatenb < 8)
+                 if isempty(exclude)
+                    fprintf('Partitioning possible with %s \n',nodes_names{i,1})
+                    fprintf('Final NOR gates with 1 QS: %i \n',final_gatenb)
+                    nb_items = nb_items + 1;
+                    exclude{nb_items} = nodes_names{i,1};
+                 else
+                    if ~(strcmp(exclude,nodes_names{i,1}))
+                        fprintf('Partitioning possible with %s \n',nodes_names{i,1})
+                        fprintf('Final NOR gates with 1 QS: %i \n',final_gatenb)
+                    end
+                 end
+            end
+       end
+
+    end
+%     nodes
+%     gates
+%     gates_number
+%     terminal
+%     nodes_names
+    
+    if ~exist('plotting')
+        treeplot_cust(nodes,nodes_names,offending)
+    end
+    axis off
+%     if offending == 1
+%        fprintf('The relevant QS inputs are: %s %s \n',nodes_names{end-1,1},nodes_names{end,1})
+%     end
+end

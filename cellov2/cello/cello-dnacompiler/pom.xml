@@ -1,0 +1,118 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.cellocad.v2</groupId>
+    <artifactId>cello-parent</artifactId>
+    <version>2.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>cello-dnacompiler</artifactId>
+  <properties>
+    <stage.name>DNACompiler</stage.name>
+    <docker.image.prefix>cidarlab</docker.image.prefix>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.cellocad.v2</groupId>
+      <artifactId>cello-common</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.cellocad.v2</groupId>
+      <artifactId>cello-logicsynthesis</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <!-- <dependency> -->
+    <!--   <groupId>org.cellocad.v2</groupId> -->
+    <!--   <artifactId>cello-logicoptimization</artifactId> -->
+    <!--   <version>${project.version}</version> -->
+    <!-- </dependency> -->
+    <!-- <dependency> -->
+    <!--   <groupId>org.cellocad.v2</groupId> -->
+    <!--   <artifactId>cello-clustering</artifactId> -->
+    <!--   <version>${project.version}</version> -->
+    <!-- </dependency> -->
+    <!-- <dependency> -->
+    <!--   <groupId>org.cellocad.v2</groupId> -->
+    <!--   <artifactId>cello-partitioning</artifactId> -->
+    <!--   <version>${project.version}</version> -->
+    <!-- </dependency> -->
+    <dependency>
+      <groupId>org.cellocad.v2</groupId>
+      <artifactId>cello-technologymapping</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.cellocad.v2</groupId>
+      <artifactId>cello-placing</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.cellocad.v2</groupId>
+      <artifactId>cello-export</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <!-- <resources> -->
+    <!--   <resource> -->
+    <!--     <directory>${basedir}/src/main/resources</directory> -->
+    <!--   </resource> -->
+    <!--   <resource> -->
+    <!--     <directory>${project.build.directory}/generated-resources</directory> -->
+    <!--     <filtering>true</filtering> -->
+    <!--   </resource> -->
+    <!-- </resources> -->
+    <plugins>
+      <plugin>
+        <!-- http://dmp.fabric8.io/ -->
+        <groupId>io.fabric8</groupId>
+        <artifactId>docker-maven-plugin</artifactId>
+        <extensions>true</extensions>
+        <version>0.33.0</version>
+        <configuration>
+          <images>
+            <image>
+              <name>${docker.image.prefix}/${project.artifactId}:%l</name>
+              <build>
+                <args>
+                  <JAR_FILE>${project.build.finalName}-jar-with-dependencies.jar</JAR_FILE>
+                </args>
+                <dockerFile>src${file.separator}main${file.separator}docker${file.separator}Dockerfile</dockerFile>
+                <contextDir>${project.basedir}</contextDir>
+              </build>
+            </image>
+          </images>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <!-- https://blog.sonatype.com/2008/04/how-to-share-resources-across-projects-in-maven/ -->
+            <id>unpack-shared-resources</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>unpack-dependencies</goal>
+            </goals>
+            <configuration>
+              <includes>algorithms/**/*.json</includes>
+              <outputDirectory>${project.build.directory}/generated-resources</outputDirectory>
+              <excludeTransitive>true</excludeTransitive>
+              <includeGroupIds>${project.groupId}</includeGroupIds>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

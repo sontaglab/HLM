@@ -1,0 +1,77 @@
+\documentclass[border=3mm]{standalone}
+\usepackage[rgb]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes.gates.logic.US,shapes.gates.logic.IEC,calc}
+
+
+\pgfmathdeclarerandomlist{MyRandomColors}{
+	{black} 
+	{blue}
+	{brown}
+	{cyan}	%{darkgray}	
+	{yellow}
+	{lime}%{lightgray}
+	{green}
+	{magenta}	%{olive}
+	{orange}
+	{red}
+	{purple}
+	{pink}
+	{teal}
+	{violet}%{white}
+	{gray}
+}
+\begin{document}
+	\thispagestyle{empty}
+	\tikzstyle{branch}=[fill,shape=circle,minimum size=3pt,inner sep=0pt]
+	
+	\def\prunelist#1{%
+		\expandafter\edef\csname pgfmath@randomlist@#1\endcsname
+		{\the\numexpr\csname pgfmath@randomlist@#1\endcsname-1\relax}
+		\count@\pgfmath@randomtemp 
+		\loop
+		\expandafter\let
+		\csname pgfmath@randomlist@#1@\the\count@\expandafter\endcsname
+		\csname pgfmath@randomlist@#1@\the\numexpr\count@+1\relax\endcsname
+		\ifnum\count@<\csname pgfmath@randomlist@#1\endcsname\relax
+		\advance\count@\@ne
+		\repeat}
+	
+
+	\begin{tikzpicture}[label distance=2mm]
+	
+	
+	\node (x3) at (0,4) {$x_4$};
+	\node (x1) at (0,2) {$x_2$};
+	\node (x0) at (3,2) {$x_1$};
+	\node (x2) at (2,0) {$x_3$};
+	\pgfmathsetseed{57}
+
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[nor gate US, draw, logic gate inputs=nn, fill=\RandomColor] at ($(x3)+(0.8,-0.5)$) (Nor1) {};
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[nor gate US, draw, logic gate inputs=nn, fill=\RandomColor] at ($(x1)+(2.2,1)$) (Nor2) {};
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[nor gate US, draw, logic gate inputs=nn, fill=\RandomColor] at ($(Nor2)+(3.8,-0.5)$) (Nor3) {};
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[nor gate US, draw, logic gate inputs=nn, fill=\RandomColor] at ($(x0)+(1,-0.5)$) (Nor5) {};
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[not gate US, draw, logic gate inputs=nn, fill=\RandomColor] at ($(Nor5)+(1,0)$) (Nor4) {};
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[nor gate US, draw, logic gate inputs=nn, fill=\RandomColor] at ($(x2)+(0.8,0.5)$) (Nor6) {};	
+
+
+	\draw (0,2.9) node[branch] {} -| (Nor2.input 2);
+	\draw (x3) |- (Nor1.input 1);
+	\draw (x1) |- (Nor1.input 2);
+	\draw (Nor1.output) |- (Nor2.input 1);
+	\draw (1.7,3.1) node[branch] {} |- (Nor6.input 1);
+	\draw (x2) |- (Nor6.input 2);
+	\draw (Nor2.output) |- (Nor3.input 1);
+	\draw (Nor4.output) |- (Nor3.input 2);
+	\draw (x0) |- (Nor5.input 1);
+	\draw (Nor6.output) |- (Nor5.input 2);
+	\draw (Nor5.output) |- (Nor4.input);
+	\draw (Nor3.output) |- ($(Nor3)+(1,0)$);
+	\end{tikzpicture}
+\end{document} 

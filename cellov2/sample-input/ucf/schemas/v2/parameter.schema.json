@@ -1,0 +1,40 @@
+{
+	"$id": "parameter.schema.json",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "parameter",
+	"description": "A numerical parameter.",
+	"type": "object",
+	"properties": {
+		"name": {
+			"description": "The parameter name.",
+			"type": "string"
+		},
+		"value": {
+			"description": "The parameter value.",
+			"type": "number"
+		},
+		"map": {
+			"description": "A reference to another parameter.",
+			"type": "string",
+			"pattern": "^#/(/[A-Za-z0-9_]+)+$"
+		},
+		"description": {
+			"description": "The parameter description.",
+			"type": "string"
+		}
+	},
+	"oneOf": [
+		{
+			"required": [
+				"name",
+				"value"
+			]
+		},
+		{
+			"required": [
+				"name",
+				"map"
+			]
+		}
+	]
+}

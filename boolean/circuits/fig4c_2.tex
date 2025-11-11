@@ -1,0 +1,75 @@
+\documentclass[border=3mm]{standalone}
+\usepackage[rgb]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes.gates.logic.US,shapes.gates.logic.IEC,calc}
+
+
+\pgfmathdeclarerandomlist{MyRandomColors}{
+	{black} 
+	{blue}
+	{brown}
+	{cyan}
+	{darkgray}
+	{gray}
+	{green}
+	{lightgray}
+	{lime}
+	{magenta}
+	{olive}
+	{orange}
+	{pink}
+	{purple}
+	{red}
+	{teal}
+	{violet}
+	{white}
+	{yellow}
+}
+
+\begin{document}
+	\thispagestyle{empty}
+	\tikzstyle{branch}=[fill,shape=circle,minimum size=3pt,inner sep=0pt]
+	
+	\def\prunelist#1{%
+		\expandafter\edef\csname pgfmath@randomlist@#1\endcsname
+		{\the\numexpr\csname pgfmath@randomlist@#1\endcsname-1\relax}
+		\count@\pgfmath@randomtemp 
+		\loop
+		\expandafter\let
+		\csname pgfmath@randomlist@#1@\the\count@\expandafter\endcsname
+		\csname pgfmath@randomlist@#1@\the\numexpr\count@+1\relax\endcsname
+		\ifnum\count@<\csname pgfmath@randomlist@#1\endcsname\relax
+		\advance\count@\@ne
+		\repeat}
+	
+
+	\begin{tikzpicture}[label distance=2mm]
+	
+	
+	\node (x3) at (2,2) {$x_4$};
+	\node (x1) at (0,1) {$x_2$};
+	\node (QS) at (1,0) {$QS$};
+	\pgfmathsetseed{337}
+
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[not gate US, draw, logic gate inputs=nn, fill=\RandomColor] at ($(x3)+(1,0)$) (Nor1) {};
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[not gate US, draw, logic gate inputs=nn, fill=\RandomColor] at ($(x1)+(1,0)$) (Nor2) {};
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[nor gate US, draw, logic gate inputs=nn, fill=\RandomColor] at ($(QS)+(1,0.5)$) (Nor3) {};
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[not gate US, draw, logic gate inputs=nn, fill=\RandomColor] at ($(Nor3)+(1,0)$) (Nor4) {};
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[nor gate US, draw, logic gate inputs=nn, fill=\RandomColor] at ($(Nor4)+(1,0.75)$) (Nor5) {};
+	
+	\draw (x3) |- (Nor1.input);
+	\draw (x1) |- (Nor2.input);
+	\draw (QS) |- (Nor3.input 2);
+	\draw (Nor2.output) |-(Nor3.input 1);
+	\draw (Nor3.output) |-(Nor4.input);
+	\draw (Nor4.output) |-(Nor5.input 2);
+	\draw (Nor1.output) |-(Nor5.input 1);
+	\draw (Nor5.output) |- ($(Nor5.output)+(0.5,0)$);
+	
+ 	\end{tikzpicture}
+\end{document} 

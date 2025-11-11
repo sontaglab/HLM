@@ -1,0 +1,72 @@
+digraph parity3 {
+label="parity3"
+rankdir="LR"
+remincross=true
+splines=ortho
+{rank = same; "a";"b";"c";}
+{rank = same; "y";}
+"a" [shape=octagon, label="a
+PRIMARY_INPUT"]
+"aPoint" [ shape=point ]
+"a" -> "aPoint":w
+"b" [shape=octagon, label="b
+PRIMARY_INPUT"]
+"bPoint" [ shape=point ]
+"b" -> "bPoint":w
+"c" [shape=octagon, label="c
+PRIMARY_INPUT"]
+"cPoint" [ shape=point ]
+"c" -> "cPoint":w
+"y" [shape=octagon, label="y
+PRIMARY_OUTPUT"]
+"$78" [shape=box, label="$78
+NOT"]
+"$89" [shape=box, label="$89
+NOR"]
+"$79" [shape=box, label="$79
+NOT"]
+"$79Point" [ shape=point ]
+"$79" -> "$79Point":w
+"$85" [shape=box, label="$85
+NOR"]
+"$86" [shape=box, label="$86
+NOR"]
+"$87" [shape=box, label="$87
+NOR"]
+"$88" [shape=box, label="$88
+NOR"]
+"$81" [shape=box, label="$81
+NOR"]
+"$82" [shape=box, label="$82
+NOR"]
+"$83" [shape=box, label="$83
+NOR"]
+"$84" [shape=box, label="$84
+NOR"]
+"$80" [shape=box, label="$80
+NOT"]
+"$80Point" [ shape=point ]
+"$80" -> "$80Point":w
+"aPoint":e -> "$78"
+"aPoint":e -> "$88"
+"bPoint":e -> "$81"
+"bPoint":e -> "$84"
+"bPoint":e -> "$80"
+"$88" -> "$89"
+"cPoint":e -> "$79"
+"cPoint":e -> "$81"
+"cPoint":e -> "$83"
+"$87" -> "$89"
+"$82" -> "$85"
+"$86" -> "$87"
+"$81" -> "$85"
+"$85" -> "$88"
+"$84" -> "$86"
+"$78" -> "$87"
+"$80Point":e -> "$82"
+"$80Point":e -> "$83"
+"$79Point":e -> "$82"
+"$79Point":e -> "$84"
+"$83" -> "$86"
+"$89" -> "y"
+}

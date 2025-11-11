@@ -1,0 +1,7 @@
+logicSynthesis.Gates,"NOR"
+
+logicSynthesis.NetSynth,false
+
+partitioning,GPCC_SUGARM_BASE
+
+placing,GPCC_GRID

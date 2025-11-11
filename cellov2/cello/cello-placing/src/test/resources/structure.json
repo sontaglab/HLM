@@ -1,0 +1,51 @@
+{
+    "collection": "structures",
+    "name": "P1_PhlF_structure",
+    "inputs": [
+        {
+            "name": "in1",
+            "part_type": "promoter"
+        },
+        {
+            "name": "in2",
+            "part_type": "promoter"
+        }
+    ],
+    "outputs": [
+        "pPhlF"
+    ],
+    "devices": [
+        {
+            "name": "P1_PhlF_a",
+            "components": [
+                "#in1",
+                "P1_PhlF_a_cassette"
+            ]
+        },
+        {
+            "name": "P1_PhlF_a_cassette",
+            "components": [
+                "RiboJ53",
+                "P1",
+                "PhlF",
+                "DT5"
+            ]
+        },
+        {
+            "name": "P1_PhlF_b",
+            "components": [
+                "#in2",
+                "P1_PhlF_b_cassette"
+            ]
+        },
+        {
+            "name": "P1_PhlF_b_cassette",
+            "components": [
+                "RiboJ53",
+                "P1",
+                "PhlF",
+                "DT5"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,112 @@
+\documentclass[border=3mm]{standalone}
+\usepackage[rgb]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes.gates.logic.US,shapes.gates.logic.IEC,calc}
+
+
+
+
+\begin{document}
+\thispagestyle{empty}
+\tikzstyle{branch}=[fill,shape=circle,minimum size=3pt,inner sep=0pt]
+
+\def\prunelist#1{%
+	\expandafter\edef\csname pgfmath@randomlist@#1\endcsname
+	{\the\numexpr\csname pgfmath@randomlist@#1\endcsname-1\relax}
+	\count@\pgfmath@randomtemp 
+	\loop
+	\expandafter\let
+	\csname pgfmath@randomlist@#1@\the\count@\expandafter\endcsname
+	\csname pgfmath@randomlist@#1@\the\numexpr\count@+1\relax\endcsname
+	\ifnum\count@<\csname pgfmath@randomlist@#1\endcsname\relax
+	\advance\count@\@ne
+	\repeat}
+
+\pgfmathdeclarerandomlist{MyRandomColors}{
+	{black} 
+	{blue}
+	{brown}
+	{cyan}	%{darkgray}	
+	{yellow}
+	{lime}%{lightgray}
+	{green}
+	{magenta}	%{olive}
+	{orange}
+	{red}
+	{purple}
+	{pink}
+	{teal}
+	{violet}
+	{white}
+	{gray}
+}
+\begin{tikzpicture}[label distance=2mm]
+	\pgfmathsetseed{16}
+
+    \node (x0) at (0,3) {$x_1$};
+    \node (x1) at (0,2) {$x_2$};
+    \node (x2) at (0,1.35) {$x_3$};
+    \node (x3) at (0,0.675) {$x_4$};
+	\node (x2b) at (0,3.65) {$x_3$};
+	\node (x3b) at (0,4.325) {$x_4$};
+	
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[not gate US, draw, logic gate inputs=nn, fill=red] at ($(x0)+(1,0)$) (Nor1) {};
+
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[not gate US, draw, logic gate inputs=nn, fill=red] at ($(x1)+(1,0)$) (Nor2) {};
+
+	%\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	%\node[not gate US, draw, logic gate inputs=nn, fill=blue] at ($(x2)+(1,0)$) (Nor3) {};
+
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[not gate US, draw, logic gate inputs=nn, fill=blue] at ($(x3)+(1,0)$) (Nor4) {};
+
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[nor gate US, draw, logic gate inputs=nn, fill=red] at ($(Nor1)+(1,-0.5)$) (Nor5) {};
+
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[not gate US, draw, logic gate inputs=nn, fill=red] at ($(Nor5)+(1,0)$) (Nor6) {};
+	
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[nor gate US, draw, logic gate inputs=nn, fill=blue] at ($(Nor6)+(1,-1.05)$) (Nor7) {};
+	
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[not gate US, draw, logic gate inputs=nn, fill=blue] at ($(Nor7)+(1,0)$) (Nor8) {};
+	
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[nor gate US, draw, logic gate inputs=nn, fill=blue] at ($(Nor8)+(1,-0.7)$) (Nor9) {};
+
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[nor gate US, draw, logic gate inputs=nn, fill=green] at ($(Nor6)+(1,1.05)$) (Nor10) {};
+	
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[not gate US, draw, logic gate inputs=nn, fill=green] at ($(Nor10)+(1,0)$) (Nor11) {};
+	
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[nor gate US, draw, logic gate inputs=nn, fill=green] at ($(Nor11)+(1,0.7)$) (Nor12) {};
+	
+	\pgfmathrandomitem{\RandomColor}{MyRandomColors} 
+	\node[not gate US, draw, logic gate inputs=nn, fill=green] at ($(x2b)+(1,0)$) (Nor13) {};
+	\draw (x0) |- (Nor1.input);
+	\draw (x1) |- (Nor2.input);
+	\draw ($(x2)+(0.3,0)$) |- (Nor7.input 2);
+	\draw (x3) |- (Nor4.input);
+	\draw (Nor1.output) |- (Nor5.input 1);
+	\draw (Nor2.output) |- (Nor5.input 2);
+	\draw (Nor5.output) |- (Nor6.input);
+	\draw (Nor6.output) |- (Nor7.input 1);
+	%\draw (Nor3.output) |- (Nor7.input 2);
+	\draw (Nor4.output) |- (Nor9.input 2);
+	\draw (Nor7.output) |- (Nor8.input); 
+	\draw (Nor8.output) |- (Nor9.input 1);
+	\draw (x2b) |- (Nor13.input);
+	\draw (Nor13.output) |- (Nor10.input 1);
+	\draw (Nor6.output) |- (Nor10.input 2);
+	\draw (Nor10.output) |- (Nor11.input);
+	\draw ($(x3b)+(0.3,0)$) |- (Nor12.input 1);
+	\draw (Nor11.output) |- (Nor12.input 2);
+	\draw (Nor12.output) |- ($(Nor12)+(1,0)$);
+	\draw (Nor9.output) |- ($(Nor9)+(1,0)$);
+\end{tikzpicture}
+\end{document} 

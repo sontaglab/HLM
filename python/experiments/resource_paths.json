@@ -1,0 +1,5 @@
+{
+  "ucf": "experiments/resources/Eco1C1G1T1.UCF.json",
+  "input_sensor": "experiments/resources/Eco1C1G1T1.input.json",
+  "output_device": "experiments/resources/Eco1C1G1T1.output.json"
+}

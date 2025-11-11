@@ -1,0 +1,72 @@
+digraph parity3 {
+label="parity3"
+rankdir="LR"
+remincross=true
+splines=ortho
+{rank = same; "a";"b";"c";}
+{rank = same; "y";}
+"a" [shape=octagon, label="a
+PRIMARY_INPUT"]
+"aPoint" [ shape=point ]
+"a" -> "aPoint":w
+"b" [shape=octagon, label="b
+PRIMARY_INPUT"]
+"bPoint" [ shape=point ]
+"b" -> "bPoint":w
+"c" [shape=octagon, label="c
+PRIMARY_INPUT"]
+"cPoint" [ shape=point ]
+"c" -> "cPoint":w
+"y" [shape=octagon, label="y
+PRIMARY_OUTPUT"]
+"$59" [shape=box, label="$59
+NOR"]
+"$55" [shape=box, label="$55
+NOR"]
+"$56" [shape=box, label="$56
+NOR"]
+"$57" [shape=box, label="$57
+NOR"]
+"$58" [shape=box, label="$58
+NOR"]
+"$51" [shape=box, label="$51
+NOT"]
+"$51Point" [ shape=point ]
+"$51" -> "$51Point":w
+"$52" [shape=box, label="$52
+NOT"]
+"$52Point" [ shape=point ]
+"$52" -> "$52Point":w
+"$53" [shape=box, label="$53
+NOR"]
+"$54" [shape=box, label="$54
+NOR"]
+"$60" [shape=box, label="$60
+NOR"]
+"$50" [shape=box, label="$50
+NOT"]
+"$61" [shape=box, label="$61
+NOR"]
+"$56" -> "$58"
+"$53" -> "$57"
+"$55" -> "$58"
+"$52Point":e -> "$55"
+"$52Point":e -> "$54"
+"aPoint":e -> "$60"
+"aPoint":e -> "$50"
+"$58" -> "$59"
+"$51Point":e -> "$56"
+"$51Point":e -> "$54"
+"bPoint":e -> "$55"
+"bPoint":e -> "$51"
+"bPoint":e -> "$53"
+"$57" -> "$60"
+"$50" -> "$59"
+"cPoint":e -> "$56"
+"cPoint":e -> "$52"
+"cPoint":e -> "$53"
+"$54" -> "$57"
+"$60" -> "$61"
+"$59" -> "$61"
+"$61" -> "y"
+}

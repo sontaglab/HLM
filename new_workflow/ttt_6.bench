@@ -1,0 +1,7 @@
+# Benchmark "rca2" written by ABC on Fri Jun 19 18:50:30 2020
+INPUT(x_3)
+INPUT(x_4)
+INPUT(x_5)
+OUTPUT(s)
+new_n5_     = AND(x_3, x_4)
+s           = AND(x_5, new_n5_)

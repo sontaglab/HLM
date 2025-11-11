@@ -1,0 +1,9 @@
+# Benchmark "rca2" written by ABC on Mon Sep 14 01:03:53 2020
+.model rca2
+.inputs x_1 x_2 x_3 x_4
+.outputs s
+.names x_1 x_2 x_3 x_4 s
+010- 0
+0-11 0
+10-1 0
+.end

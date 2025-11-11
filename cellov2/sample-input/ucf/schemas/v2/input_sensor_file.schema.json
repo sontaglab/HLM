@@ -1,0 +1,16 @@
+{
+	"$id": "input_sensor_file.schema.json",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "input_sensor_file",
+	"description": "An input sensor file object.",
+	"type": "array",
+	"items": {
+		"anyOf": [
+			{ "$ref": "file:input_sensors.schema.json" },
+			{ "$ref": "file:models.schema.json" },
+			{ "$ref": "file:structures.schema.json" },
+			{ "$ref": "file:functions.schema.json" },
+			{ "$ref": "file:parts.schema.json" }
+		]
+	}
+}

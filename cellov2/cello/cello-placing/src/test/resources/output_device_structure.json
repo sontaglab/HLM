@@ -1,0 +1,24 @@
+{
+	"collection": "structures",
+	"name": "YFP_reporter_structure",
+	"inputs": [
+		{
+			"name": "in1",
+			"part_type": "promoter"
+		},
+		{
+			"name": "in2",
+			"part_type": "promoter"
+		}
+	],
+	"devices": [
+		{
+			"name": "YFP_reporter",
+			"components": [
+				"#in2",
+				"#in1",
+				"YFP_cassette"
+			]
+		}
+	]
+}

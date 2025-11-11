@@ -1,0 +1,36 @@
+{
+	"$id": "parts.schema.json",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "parts",
+	"description": "A `parts` object in a UCF document.",
+	"type": "object",
+	"properties": {
+		"collection": {
+			"constant": "parts"
+		},
+		"name": {
+			"description": "The name of the part.",
+			"type": "string"
+		},
+		"type": {
+			"type": "string",
+			"enum": ["promoter", "cds", "ribozyme", "rbs", "terminator", "cassette", "scar"]
+		},
+		"dnasequence": {
+			"description": "The DNA sequence of the part.",
+			"type": "string",
+			"pattern": "^[AaTtGgCc]*$"
+		},
+		"uri": {
+			"description": "A URI of the part.",
+			"type": "string",
+			"format": "uri"
+		}
+	},
+	"required": [
+		"collection",
+		"name",
+		"type",
+		"dnasequence"
+	]
+}

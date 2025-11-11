@@ -1,0 +1,219 @@
+{
+	"name": "parity3",
+	"inputFilename": "/workspace/examples/circuits/parity3.v",
+	"placements": 
+	[
+	],
+	"nodes": 
+	[
+		{
+			"name": "a",
+			"nodeType": "PRIMARY_INPUT",
+			"partitionID": -1,
+			"deviceName": "LacI_sensor",
+		},
+		{
+			"name": "b",
+			"nodeType": "PRIMARY_INPUT",
+			"partitionID": -1,
+			"deviceName": "TetR_sensor",
+		},
+		{
+			"name": "c",
+			"nodeType": "PRIMARY_INPUT",
+			"partitionID": -1,
+			"deviceName": "AraC_sensor",
+		},
+		{
+			"name": "y",
+			"nodeType": "PRIMARY_OUTPUT",
+			"partitionID": -1,
+			"deviceName": "YFP_reporter",
+		},
+		{
+			"name": "$59",
+			"nodeType": "NOR",
+			"partitionID": -1,
+			"deviceName": "E1_BetI",
+		},
+		{
+			"name": "$55",
+			"nodeType": "NOR",
+			"partitionID": -1,
+			"deviceName": "L1_LitR",
+		},
+		{
+			"name": "$56",
+			"nodeType": "NOR",
+			"partitionID": -1,
+			"deviceName": "F1_AmeR",
+		},
+		{
+			"name": "$57",
+			"nodeType": "NOR",
+			"partitionID": -1,
+			"deviceName": "H1_HlyIIR",
+		},
+		{
+			"name": "$58",
+			"nodeType": "NOR",
+			"partitionID": -1,
+			"deviceName": "Q1_QacR",
+		},
+		{
+			"name": "$51",
+			"nodeType": "NOT",
+			"partitionID": -1,
+			"deviceName": "R1_PsrA",
+		},
+		{
+			"name": "$52",
+			"nodeType": "NOT",
+			"partitionID": -1,
+			"deviceName": "I1_IcaRA",
+		},
+		{
+			"name": "$53",
+			"nodeType": "NOR",
+			"partitionID": -1,
+			"deviceName": "N1_LmrA",
+		},
+		{
+			"name": "$54",
+			"nodeType": "NOR",
+			"partitionID": -1,
+			"deviceName": "S4_SrpR",
+		},
+		{
+			"name": "$60",
+			"nodeType": "NOR",
+			"partitionID": -1,
+			"deviceName": "B2_BM3R1",
+		},
+		{
+			"name": "$50",
+			"nodeType": "NOT",
+			"partitionID": -1,
+			"deviceName": "A1_AmtR",
+		},
+		{
+			"name": "$61",
+			"nodeType": "NOR",
+			"partitionID": -1,
+			"deviceName": "P3_PhlF",
+		},
+	],
+	"edges": 
+	[
+		{
+			"name": "$n11_0",
+			"src": "$56",
+			"dst": "$58",
+		},
+		{
+			"name": "$n8_0",
+			"src": "$53",
+			"dst": "$57",
+		},
+		{
+			"name": "$n10_0",
+			"src": "$55",
+			"dst": "$58",
+		},
+		{
+			"name": "$n7_0",
+			"src": "$52",
+			"dst": "$55",
+		},
+		{
+			"name": "$n7_1",
+			"src": "$52",
+			"dst": "$54",
+		},
+		{
+			"name": "a_0",
+			"src": "a",
+			"dst": "$60",
+		},
+		{
+			"name": "a_1",
+			"src": "a",
+			"dst": "$50",
+		},
+		{
+			"name": "$n13_0",
+			"src": "$58",
+			"dst": "$59",
+		},
+		{
+			"name": "$n6_0",
+			"src": "$51",
+			"dst": "$56",
+		},
+		{
+			"name": "$n6_1",
+			"src": "$51",
+			"dst": "$54",
+		},
+		{
+			"name": "b_0",
+			"src": "b",
+			"dst": "$55",
+		},
+		{
+			"name": "b_1",
+			"src": "b",
+			"dst": "$51",
+		},
+		{
+			"name": "b_2",
+			"src": "b",
+			"dst": "$53",
+		},
+		{
+			"name": "$n12_0",
+			"src": "$57",
+			"dst": "$60",
+		},
+		{
+			"name": "$n5_0",
+			"src": "$50",
+			"dst": "$59",
+		},
+		{
+			"name": "c_0",
+			"src": "c",
+			"dst": "$56",
+		},
+		{
+			"name": "c_1",
+			"src": "c",
+			"dst": "$52",
+		},
+		{
+			"name": "c_2",
+			"src": "c",
+			"dst": "$53",
+		},
+		{
+			"name": "$n9_0",
+			"src": "$54",
+			"dst": "$57",
+		},
+		{
+			"name": "$n15_0",
+			"src": "$60",
+			"dst": "$61",
+		},
+		{
+			"name": "$n14_0",
+			"src": "$59",
+			"dst": "$61",
+		},
+		{
+			"name": "y_0",
+			"src": "$61",
+			"dst": "y",
+		},
+	],
+},

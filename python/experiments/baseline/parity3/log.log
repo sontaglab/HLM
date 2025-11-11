@@ -1,0 +1,355 @@
+2025-09-27 06:02:21.229 [main] INFO  LSRuntimeObject - Executing Stage: logicSynthesis
+2025-09-27 06:02:21.315 [main] INFO  LSRuntimeObject - Executing Algorithm: Yosys
+2025-09-27 06:02:23.052 [main] INFO  Yosys - +-----------------------------------------------------
+2025-09-27 06:02:23.056 [main] INFO  Yosys - |			    RESULTS
+2025-09-27 06:02:23.058 [main] INFO  Yosys - +-----------------------------------------------------
+2025-09-27 06:02:23.065 [main] INFO  Yosys - :               NOR cells:        9
+2025-09-27 06:02:23.067 [main] INFO  Yosys - :               NOT cells:        3
+2025-09-27 06:02:23.069 [main] INFO  Yosys - :        internal signals:        1
+2025-09-27 06:02:23.071 [main] INFO  Yosys - :           input signals:        3
+2025-09-27 06:02:23.072 [main] INFO  Yosys - :          output signals:        1
+2025-09-27 06:02:23.074 [main] INFO  Yosys - +-----------------------------------------------------
+2025-09-27 06:02:23.076 [main] INFO  Yosys - 
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `/workspace/experiments/baseline/parity3/parity3.ys' --
+
+1. Executing Verilog-2005 frontend: /workspace/examples/circuits/parity3.v
+Parsing Verilog input from `/workspace/examples/circuits/parity3.v' to AST representation.
+Generating RTLIL representation for module `\parity3'.
+Successfully finished Verilog frontend.
+
+2. Executing FLATTEN pass (flatten design).
+No more expansions possible.
+
+3. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Finding top of design hierarchy..
+root of   0 design levels: parity3             
+Automatically selected parity3 as design top module.
+
+4.2. Analyzing design hierarchy..
+Top module:  \parity3
+
+4.3. Analyzing design hierarchy..
+Top module:  \parity3
+Removed 0 unused modules.
+
+5. Executing PROC pass (convert processes to netlists).
+
+5.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+5.3. Executing PROC_INIT pass (extract init attributes).
+
+5.4. Executing PROC_ARST pass (detect async resets in processes).
+
+5.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+5.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+5.7. Executing PROC_DFF pass (convert process syncs to FFs).
+
+5.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+6. Executing TECHMAP pass (map to technology primitives).
+
+6.1. Executing Verilog-2005 frontend: <techmap.v>
+Parsing Verilog input from `<techmap.v>' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+6.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $xor.
+No more expansions possible.
+<suppressed ~2 debug messages>
+
+7. Executing OPT pass (performing simple optimizations).
+
+7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module parity3.
+
+7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\parity3'.
+Removed a total of 0 cells.
+
+7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \parity3..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \parity3.
+Performed a total of 0 changes.
+
+7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\parity3'.
+Removed a total of 0 cells.
+
+7.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \parity3..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module parity3.
+
+7.9. Finished OPT passes. (There is nothing left to do.)
+
+8. Executing ABC pass (technology mapping using ABC).
+
+8.1. Extracting gate netlist of module `\parity3' to `<abc-temp-dir>/input.blif'..
+Extracted 2 gates and 5 wires to a netlist network with 3 inputs and 1 outputs.
+
+8.1.1. Executing ABC.
+Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 5 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + ifraig 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+8.1.2. Re-integrating ABC results.
+ABC RESULTS:               NOR cells:        9
+ABC RESULTS:               NOT cells:        3
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        3
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+9. Executing OPT pass (performing simple optimizations).
+
+9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module parity3.
+
+9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\parity3'.
+Removed a total of 0 cells.
+
+9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \parity3..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \parity3.
+Performed a total of 0 changes.
+
+9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\parity3'.
+Removed a total of 0 cells.
+
+9.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \parity3..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~1 debug messages>
+
+9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module parity3.
+
+9.9. Finished OPT passes. (There is nothing left to do.)
+
+10. Executing HIERARCHY pass (managing design hierarchy).
+
+10.1. Analyzing design hierarchy..
+Top module:  \parity3
+
+10.2. Analyzing design hierarchy..
+Top module:  \parity3
+Removed 0 unused modules.
+
+11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \parity3..
+
+12. Generating Graphviz representation of design.
+Writing dot description to `/workspace/experiments/baseline/parity3/parity3_yosys.dot'.
+Dumping module parity3 to page 1.
+Exec: dot -Tpdf '/workspace/experiments/baseline/parity3/parity3_yosys.dot' > '/workspace/experiments/baseline/parity3/parity3_yosys.pdf.new' && mv '/workspace/experiments/baseline/parity3/parity3_yosys.pdf.new' '/workspace/experiments/baseline/parity3/parity3_yosys.pdf'
+
+13. Executing EDIF backend.
+
+14. Executing JSON backend.
+
+End of script. Logfile hash: 22849b4d81
+CPU: user 0.30s system 0.05s, MEM: 164.61 MB total, 30.05 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 47% 3x read_verilog (0 sec), 8% 1x abc (0 sec), ...
+
+2025-09-27 06:02:23.109 [main] INFO  Yosys - 
+2025-09-27 06:02:25.094 [main] INFO  Main - 
+--------------------------------------------
+LogicSynthesisStats
+--------------------------------------------
+Netlist name: parity3
+--------------------------------------------
+Total number of inputs: 3
+Number of primary inputs: 3
+Number of inputs: 0
+--------------------------------------------
+Total number of outputs: 1
+Number of primary outputs: 1
+Number of outputs: 0
+--------------------------------------------
+Number of gates : 12
+Number of PRIMARY_INPUT gates: 3
+Number of PRIMARY_OUTPUT gates: 1
+Number of NOT gates: 3
+Number of NOR gates: 9
+
+2025-09-27 06:02:25.118 [main] INFO  TMRuntimeObject - Executing Stage: technologyMapping
+2025-09-27 06:02:25.179 [main] INFO  TMRuntimeObject - Executing Algorithm: SimulatedAnnealing
+2025-09-27 06:02:25.388 [main] INFO  SimulatedAnnealing - 
+--------------------------------------------
+LSLogicEvaluation
+--------------------------------------------
+$52            	true	true	true	true	false	false	false	false	
+$51            	true	true	false	false	true	true	false	false	
+$60            	true	false	false	false	false	false	true	false	
+$58            	true	true	false	false	false	false	true	true	
+$61            	false	true	true	false	true	false	false	true	
+$50            	true	false	true	false	true	false	true	false	
+$56            	false	false	true	true	false	false	false	false	
+$55            	false	false	false	false	true	true	false	false	
+$57            	false	false	true	true	true	true	false	false	
+b              	false	false	true	true	false	false	true	true	
+$59            	false	false	false	true	false	true	false	false	
+c              	false	false	false	false	true	true	true	true	
+$53            	true	true	false	false	false	false	false	false	
+a              	false	true	false	true	false	true	false	true	
+$54            	false	false	false	false	false	false	true	true	
+y              	false	true	true	false	true	false	false	true	
+--------------------------------------------
+
+2025-09-27 07:03:51.963 [main] INFO  SimulatedAnnealing - 
+--------------------------------------------
+TMToxicityEvaluation
+--------------------------------------------
+$56            	0.96	0.96	0.96	0.96	0.96	0.96	1.00	1.00	
+$52            	0.98	0.98	0.98	0.98	0.65	0.65	0.65	0.65	
+$55            	0.56	0.56	0.54	0.54	0.95	0.95	0.54	0.54	
+$57            	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	
+$59            	1.00	1.00	1.00	0.98	1.00	0.98	1.00	1.00	
+$53            	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	
+$51            	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	
+$60            	0.98	1.00	1.00	1.00	1.00	1.00	1.00	1.00	
+$58            	1.00	1.00	1.00	1.00	0.77	0.77	1.00	1.00	
+$54            	0.92	0.92	1.00	1.00	0.92	0.92	1.00	1.00	
+$61            	1.00	1.00	0.97	1.00	0.97	1.00	1.00	1.00	
+$50            	1.00	1.00	1.00	1.00	1.00	1.00	1.00	1.00	
+--------------------------------------------
+               	0.47	0.48	0.49	0.50	0.41	0.41	0.35	0.35	
+--------------------------------------------
+
+2025-09-27 07:03:52.118 [main] INFO  SimulatedAnnealing - 
+--------------------------------------------
+TMActivityEvaluation
+--------------------------------------------
+$52            	2.1379	2.1379	2.1379	2.1379	0.1031	0.1031	0.1031	0.1031	
+$51            	5.8993	5.8993	0.2199	0.2199	5.8993	5.8993	0.2199	0.2199	
+$60            	0.4363	0.0051	0.0064	0.0050	0.0065	0.0050	0.0105	0.0051	
+$58            	0.0311	0.0311	0.0107	0.0107	0.0104	0.0104	0.0284	0.0284	
+$61            	0.2269	0.0201	6.6431	0.0201	6.6421	0.0201	6.6151	0.0201	
+$50            	3.7706	0.0702	3.7706	0.0702	3.7706	0.0702	3.7706	0.0702	
+$56            	0.2103	0.2103	0.9700	0.9700	0.2063	0.2063	0.2302	0.2302	
+$55            	0.0771	0.0771	0.0711	0.0711	1.0104	1.0104	0.0720	0.0720	
+$57            	0.0741	0.0741	1.1299	1.1299	1.0918	1.0918	0.7038	0.7038	
+b              	0.0013	0.0013	4.4000	4.4000	0.0013	0.0013	4.4000	4.4000	
+$59            	0.0877	3.6743	0.0879	3.7257	0.0879	3.7262	0.0877	3.6818	
+c              	0.0082	0.0082	0.0082	0.0082	2.5000	2.5000	2.5000	2.5000	
+$53            	2.1959	2.1959	0.2024	0.2024	0.2079	0.2079	0.2009	0.2009	
+a              	0.0034	2.8000	0.0034	2.8000	0.0034	2.8000	0.0034	2.8000	
+$54            	0.0070	0.0070	0.0073	0.0073	0.0070	0.0070	0.0827	0.0827	
+y              	0.0907	0.0080	2.6572	0.0080	2.6568	0.0080	2.6461	0.0080	
+--------------------------------------------
+
+2025-09-27 07:03:52.147 [main] INFO  SimulatedAnnealing - Node: a    	Type: PRIMARY_INPUT	Gate: LacI_sensor	
+2025-09-27 07:03:52.158 [main] INFO  SimulatedAnnealing - Node: b    	Type: PRIMARY_INPUT	Gate: TetR_sensor	
+2025-09-27 07:03:52.169 [main] INFO  SimulatedAnnealing - Node: c    	Type: PRIMARY_INPUT	Gate: AraC_sensor	
+2025-09-27 07:03:52.173 [main] INFO  SimulatedAnnealing - Node: y    	Type: PRIMARY_OUTPUT	Gate: YFP_reporter	
+2025-09-27 07:03:52.177 [main] INFO  SimulatedAnnealing - Node: $59  	Type: NOR       	Gate: E1_BetI   	
+2025-09-27 07:03:52.181 [main] INFO  SimulatedAnnealing - Node: $55  	Type: NOR       	Gate: L1_LitR   	
+2025-09-27 07:03:52.184 [main] INFO  SimulatedAnnealing - Node: $56  	Type: NOR       	Gate: F1_AmeR   	
+2025-09-27 07:03:52.190 [main] INFO  SimulatedAnnealing - Node: $57  	Type: NOR       	Gate: H1_HlyIIR 	
+2025-09-27 07:03:52.193 [main] INFO  SimulatedAnnealing - Node: $58  	Type: NOR       	Gate: Q1_QacR   	
+2025-09-27 07:03:52.198 [main] INFO  SimulatedAnnealing - Node: $51  	Type: NOT       	Gate: R1_PsrA   	
+2025-09-27 07:03:52.208 [main] INFO  SimulatedAnnealing - Node: $52  	Type: NOT       	Gate: I1_IcaRA  	
+2025-09-27 07:03:52.212 [main] INFO  SimulatedAnnealing - Node: $53  	Type: NOR       	Gate: N1_LmrA   	
+2025-09-27 07:03:52.216 [main] INFO  SimulatedAnnealing - Node: $54  	Type: NOR       	Gate: S4_SrpR   	
+2025-09-27 07:03:52.220 [main] INFO  SimulatedAnnealing - Node: $60  	Type: NOR       	Gate: B2_BM3R1  	
+2025-09-27 07:03:52.225 [main] INFO  SimulatedAnnealing - Node: $50  	Type: NOT       	Gate: A1_AmtR   	
+2025-09-27 07:03:52.228 [main] INFO  SimulatedAnnealing - Node: $61  	Type: NOR       	Gate: P3_PhlF   	
+2025-09-27 07:03:52.239 [main] INFO  SimulatedAnnealing - Score: 0.00
+2025-09-27 07:03:52.242 [main] INFO  SimulatedAnnealing - Generating plots
+2025-09-27 07:10:00.685 [main] INFO  PLRuntimeObject - Executing Stage: placing
+2025-09-27 07:10:00.724 [main] INFO  PLRuntimeObject - Executing Algorithm: GPCC_GRID
+2025-09-27 07:10:02.114 [main] INFO  EXRuntimeObject - Executing Stage: export
+2025-09-27 07:10:02.206 [main] INFO  EXRuntimeObject - Executing Algorithm: SBOL
+2025-09-27 07:10:05.049 [main] INFO  SBOL - creating SBOL document
+2025-09-27 07:10:05.245 [main] INFO  SBOL - grouping inserts
+2025-09-27 07:10:05.248 [main] INFO  SBOL - adding design modules
+2025-09-27 07:10:05.249 [main] INFO  SBOL - Writing SBOL document.

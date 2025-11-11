@@ -1,0 +1,201 @@
+[ {
+  "name" : "netlist",
+  "description" : "The netlist.",
+  "file" : "parity3_logicSynthesis.dot",
+  "stage" : "logicSynthesis"
+}, {
+  "name" : "netlist",
+  "description" : "The netlist.",
+  "file" : "parity3_logicSynthesis.pdf",
+  "stage" : "logicSynthesis"
+}, {
+  "name" : "netlist",
+  "description" : "The netlist.",
+  "file" : "parity3_logicSynthesis.png",
+  "stage" : "logicSynthesis"
+}, {
+  "name" : "logic",
+  "description" : "The truth table for the circuit.",
+  "file" : "parity3_nor_logic.csv",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "toxicity",
+  "description" : "The toxicity for the circuit.",
+  "file" : "parity3_nor_toxicity.csv",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "activity",
+  "description" : "The activity for the circuit.",
+  "file" : "parity3_nor_activity.csv",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "response_plot",
+  "description" : "The response plot for node $78.",
+  "file" : "response_plot_$78_N1_LmrA.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "response_plot",
+  "description" : "The response plot for node $89.",
+  "file" : "response_plot_$89_Q1_QacR.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "response_plot",
+  "description" : "The response plot for node $79.",
+  "file" : "response_plot_$79_R1_PsrA.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "response_plot",
+  "description" : "The response plot for node $85.",
+  "file" : "response_plot_$85_I1_IcaRA.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "response_plot",
+  "description" : "The response plot for node $86.",
+  "file" : "response_plot_$86_L1_LitR.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "response_plot",
+  "description" : "The response plot for node $87.",
+  "file" : "response_plot_$87_A1_AmtR.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "response_plot",
+  "description" : "The response plot for node $88.",
+  "file" : "response_plot_$88_S4_SrpR.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "response_plot",
+  "description" : "The response plot for node $81.",
+  "file" : "response_plot_$81_H1_HlyIIR.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "response_plot",
+  "description" : "The response plot for node $82.",
+  "file" : "response_plot_$82_P3_PhlF.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "response_plot",
+  "description" : "The response plot for node $83.",
+  "file" : "response_plot_$83_B2_BM3R1.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "response_plot",
+  "description" : "The response plot for node $84.",
+  "file" : "response_plot_$84_F1_AmeR.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "response_plot",
+  "description" : "The response plot for node $80.",
+  "file" : "response_plot_$80_E1_BetI.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "cytometry_plot",
+  "description" : "The cytometry plot for node $78.",
+  "file" : "cytometry_plot_$78_N1_LmrA.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "cytometry_plot",
+  "description" : "The cytometry plot for node $89.",
+  "file" : "cytometry_plot_$89_Q1_QacR.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "cytometry_plot",
+  "description" : "The cytometry plot for node $79.",
+  "file" : "cytometry_plot_$79_R1_PsrA.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "cytometry_plot",
+  "description" : "The cytometry plot for node $85.",
+  "file" : "cytometry_plot_$85_I1_IcaRA.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "cytometry_plot",
+  "description" : "The cytometry plot for node $86.",
+  "file" : "cytometry_plot_$86_L1_LitR.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "cytometry_plot",
+  "description" : "The cytometry plot for node $87.",
+  "file" : "cytometry_plot_$87_A1_AmtR.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "cytometry_plot",
+  "description" : "The cytometry plot for node $88.",
+  "file" : "cytometry_plot_$88_S4_SrpR.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "cytometry_plot",
+  "description" : "The cytometry plot for node $81.",
+  "file" : "cytometry_plot_$81_H1_HlyIIR.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "cytometry_plot",
+  "description" : "The cytometry plot for node $82.",
+  "file" : "cytometry_plot_$82_P3_PhlF.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "cytometry_plot",
+  "description" : "The cytometry plot for node $83.",
+  "file" : "cytometry_plot_$83_B2_BM3R1.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "cytometry_plot",
+  "description" : "The cytometry plot for node $84.",
+  "file" : "cytometry_plot_$84_F1_AmeR.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "cytometry_plot",
+  "description" : "The cytometry plot for node $80.",
+  "file" : "cytometry_plot_$80_E1_BetI.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "netlist",
+  "description" : "The netlist.",
+  "file" : "parity3_technologyMapping.dot",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "netlist",
+  "description" : "The netlist.",
+  "file" : "parity3_technologyMapping.pdf",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "netlist",
+  "description" : "The netlist.",
+  "file" : "parity3_technologyMapping.png",
+  "stage" : "technologyMapping"
+}, {
+  "name" : "netlist",
+  "description" : "The netlist.",
+  "file" : "parity3_placing.dot",
+  "stage" : "placing"
+}, {
+  "name" : "netlist",
+  "description" : "The netlist.",
+  "file" : "parity3_placing.pdf",
+  "stage" : "placing"
+}, {
+  "name" : "netlist",
+  "description" : "The netlist.",
+  "file" : "parity3_placing.png",
+  "stage" : "placing"
+}, {
+  "name" : "sbol",
+  "description" : "An SBOL representation of the design.",
+  "file" : "parity3_nor.xml",
+  "stage" : "export"
+}, {
+  "name" : "netlist",
+  "description" : "The netlist.",
+  "file" : "parity3_export.dot",
+  "stage" : "export"
+}, {
+  "name" : "netlist",
+  "description" : "The netlist.",
+  "file" : "parity3_export.pdf",
+  "stage" : "export"
+}, {
+  "name" : "netlist",
+  "description" : "The netlist.",
+  "file" : "parity3_export.png",
+  "stage" : "export"
+} ]

@@ -1,0 +1,14 @@
+read_verilog /workspace/experiments/hlm/parity3/parity3_nor.v
+flatten
+splitnets -ports
+hierarchy -auto-top
+proc
+techmap
+opt
+abc -g NOR
+opt
+hierarchy -auto-top
+opt_clean -purge
+show -format pdf -prefix /workspace/experiments/hlm/parity3/parity3_nor_yosys
+write_edif /workspace/experiments/hlm/parity3/parity3_nor.edif
+write_json /workspace/experiments/hlm/parity3/parity3_nor.json

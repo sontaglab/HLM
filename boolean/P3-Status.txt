@@ -1,0 +1,2613 @@
+FUNCTION: 1 = 00.00.00.01
+Iteration 4.
+  SOLUTION: Upper Bound = 4, 0s
+-----------3-----------
+   g_3         
+    |          
+   g_4         
+   / \         
+x_0    g_5     
+        |      
+       g_6     
+       / \     
+     x_1  x_2  
+               
+----------------------
+Cost: 4  Level: 4
+g_3(0): [00.00.00.01] - [--.--.--.--] - {} - {}
+g_4(1): [11.11.11.10] - [--.--.--.--] - {} - {}
+g_5(2): [--.-1.00.01] - [--.--.--.--] - {} - {}
+g_6(3): [11.10.11.10] - [--.--.--.--] - {} - {}
+x_0(2): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(4): [01.01.01.01]
+-----------3-----------
+time = 0 secs 
+ComputeNetwork was called 4 times
+# Branch Choices = 3
+# Implications = 4
+# Structural Implications = 4
+# SearchSpace Leaves = 4
+# nodes = 52
+# networks = 7
+# conflicts = 0
+
+FUNCTION: 2 = 00.00.00.10
+Iteration 4.
+  SOLUTION: Upper Bound = 5, 0s
+-----------3-----------
+   g_3         
+    |          
+   g_4         
+   / \         
+g_5    g_6     
+ |      |      
+x_2    g_7     
+       / \     
+     x_0  x_1  
+               
+----------------------
+Cost: 5  Level: 4
+g_3(0): [00.00.00.10] - [--.--.--.--] - {} - {}
+g_4(1): [11.11.11.01] - [-*.-*.-*.--] - {} - {}
+g_5(2): [1-.1-.1-.10] - [--.--.--.--] - {} - {}
+g_6(2): [0-.0-.0-.11] - [--.--.--.--] - {} - {}
+g_7(3): [11.11.11.00] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------3-----------
+time = 0 secs 
+ComputeNetwork was called 4 times
+# Branch Choices = 3
+# Implications = 5
+# Structural Implications = 5
+# SearchSpace Leaves = 4
+# nodes = 59
+# networks = 7
+# conflicts = 0
+
+FUNCTION: 6 = 00.00.01.10
+Iteration 8.
+  SOLUTION: Upper Bound = 6, 0s
+-----------7-----------
+         g_3                  
+          |                   
+         g_4                  
+         / \                  
+  g_5            g_6          
+  / \            / \          
+x_1  x_2    g_7       g_8     
+            / \       / \     
+          x_0  x_2  x_1  x_0  
+                              
+----------------------
+Cost: 6  Level: 4
+g_3(0): [00.00.01.10] - [--.--.--.--] - {} - {}
+g_4(1): [11.11.10.01] - [--.--.--.--] - {} - {}
+g_5(2): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_6(2): [00.00.01.11] - [--.--.--.--] - {} - {}
+g_7(3): [11.11.10.10] - [--.--.--.--] - {} - {}
+g_8(3): [11.11.11.00] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(4): [01.01.01.01]
+-----------7-----------
+time = 0 secs 
+ComputeNetwork was called 13 times
+# Branch Choices = 12
+# Implications = 10
+# Structural Implications = 10
+# SearchSpace Leaves = 15
+# nodes = 249
+# networks = 27
+# conflicts = 0
+
+FUNCTION: 7 = 00.00.01.11
+Iteration 5.
+  SOLUTION: Upper Bound = 3, 0s
+-----------4-----------
+       g_3          
+       / \          
+  g_4       g_5     
+  / \       / \     
+x_0  x_2  x_0  x_1  
+                    
+----------------------
+Cost: 3  Level: 2
+g_3(0): [00.00.01.11] - [--.--.--.--] - {} - {}
+g_4(1): [11.11.10.10] - [--.--.--.--] - {} - {}
+g_5(1): [11.11.11.00] - [--.--.--.--] - {} - {}
+x_0(2): [00.00.11.11]
+x_1(2): [00.11.00.11]
+x_2(2): [01.01.01.01]
+-----------4-----------
+time = 0 secs 
+ComputeNetwork was called 5 times
+# Branch Choices = 4
+# Implications = 2
+# Structural Implications = 2
+# SearchSpace Leaves = 5
+# nodes = 58
+# networks = 9
+# conflicts = 0
+
+FUNCTION: 8 = 00.00.10.00
+Iteration 4.
+  SOLUTION: Upper Bound = 6, 0s
+-----------3-----------
+   g_3         
+    |          
+   g_4         
+   / \         
+g_5    g_6     
+ |      |      
+x_2    g_7     
+       / \     
+     g_8  x_0  
+      |        
+     x_1       
+               
+----------------------
+Cost: 6  Level: 5
+g_3(0): [00.00.10.00] - [--.--.--.--] - {} - {}
+g_4(1): [11.11.01.11] - [-*.-*.--.-*] - {} - {}
+g_5(2): [1-.1-.10.1-] - [--.--.--.--] - {} - {}
+g_6(2): [0-.0-.11.0-] - [--.--.--.--] - {} - {}
+g_7(3): [11.11.00.1-] - [--.--.--.--] - {} - {}
+g_8(4): [11.--.11.0-] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(5): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------3-----------
+time = 0 secs 
+ComputeNetwork was called 6 times
+# Branch Choices = 5
+# Implications = 7
+# Structural Implications = 7
+# SearchSpace Leaves = 6
+# nodes = 101
+# networks = 11
+# conflicts = 0
+
+FUNCTION: 9 = 00.00.10.01
+Iteration 9.
+  SOLUTION: Upper Bound = 8, 0s
+Iteration 9.
+  SOLUTION: Upper Bound = 7, 0s
+-----------11-----------
+            g_3               
+             |                
+            g_4               
+            / \               
+   g_5               g_6      
+   / \                |       
+x_2    g_9           g_7      
+       / \           / \      
+     x_2  x_1    g_8     x_0  
+                 / \          
+               x_1  g_9       
+                              
+----------------------
+Cost: 7  Level: 6
+g_3(0): [00.00.10.01] - [--.--.--.--] - {} - {}
+g_4(1): [11.11.01.10] - [--.--.--.--] - {} - {}
+g_5(2): [10.11.10.11] - [--.--.--.--] - {} - {}
+g_6(2): [0-.00.11.01] - [--.--.--.--] - {} - {}
+g_7(3): [11.11.00.10] - [--.--.--.--] - {} - {}
+g_8(4): [11.01.11.01] - [--.--.--.--] - {} - {}
+g_9(5): [11.10.11.10] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(6): [00.11.00.11]
+x_2(6): [01.01.01.01]
+-----------11-----------
+time = 0 secs 
+ComputeNetwork was called 21 times
+# Branch Choices = 19
+# Implications = 14
+# Structural Implications = 14
+# SearchSpace Leaves = 21
+# nodes = 407
+# networks = 40
+# conflicts = 0
+
+FUNCTION: 11 = 00.00.10.11
+Iteration 5.
+  SOLUTION: Upper Bound = 4, 0s
+-----------4-----------
+      g_3      
+       |       
+      g_4      
+      / \      
+  g_5     x_0  
+  / \          
+x_2  g_6       
+      |        
+     x_1       
+               
+----------------------
+Cost: 4  Level: 4
+g_3(0): [00.00.10.11] - [--.--.--.--] - {} - {}
+g_4(1): [11.11.01.00] - [--.--.--.--] - {} - {}
+g_5(2): [10.1-.10.11] - [--.--.--.--] - {} - {}
+g_6(3): [11.--.11.-0] - [--.--.--.--] - {} - {}
+x_0(2): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------4-----------
+time = 0 secs 
+ComputeNetwork was called 5 times
+# Branch Choices = 4
+# Implications = 3
+# Structural Implications = 3
+# SearchSpace Leaves = 5
+# nodes = 65
+# networks = 9
+# conflicts = 0
+
+FUNCTION: 14 = 00.00.11.10
+Iteration 5.
+  SOLUTION: Upper Bound = 3, 0s
+-----------4-----------
+      g_3      
+       |       
+      g_4      
+      / \      
+  g_5     x_0  
+  / \          
+x_1  x_2       
+               
+----------------------
+Cost: 3  Level: 3
+g_3(0): [00.00.11.10] - [--.--.--.--] - {} - {}
+g_4(1): [11.11.00.01] - [--.--.--.--] - {} - {}
+g_5(2): [11.10.11.10] - [--.--.--.--] - {} - {}
+x_0(2): [00.00.11.11]
+x_1(3): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------4-----------
+time = 0 secs 
+ComputeNetwork was called 5 times
+# Branch Choices = 4
+# Implications = 2
+# Structural Implications = 2
+# SearchSpace Leaves = 5
+# nodes = 62
+# networks = 9
+# conflicts = 0
+
+FUNCTION: 22 = 00.01.01.10
+Iteration 12.
+  SOLUTION: Upper Bound = 10, 0s
+Iteration 11.
+  SOLUTION: Upper Bound = 9, 0s
+Iteration 11.
+  SOLUTION: Upper Bound = 8, 0s
+-----------19-----------
+                    g_3                 
+                    / \                 
+         g_4                    g_9     
+         / \                    / \     
+  g_5            g_6          g_10 g_7  
+  / \            / \           |        
+x_0  x_1    g_7       g_8     g_5       
+            / \       / \               
+          x_1  x_2  x_0  x_2            
+                                        
+----------------------
+Cost: 8  Level: 4
+g_3(0): [00.01.01.10] - [--.--.--.--] - {} - {}
+g_4(1): [11.10.10.11] - [--.--.--.--] - {} - {}
+g_5(3): [11.11.11.00] - [--.--.--.--] - {} - {}
+g_6(2): [00.01.01.01] - [--.--.--.--] - {} - {}
+g_7(3): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_8(3): [11.11.10.10] - [--.--.--.--] - {} - {}
+g_9(1): [11.11.1-.01] - [--.--.--.--] - {} - {x_0}
+g_10(2): [00.0-.0-.11] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(4): [01.01.01.01]
+-----------19-----------
+time = 0 secs 
+ComputeNetwork was called 105 times
+# Branch Choices = 102
+# Implications = 92
+# Structural Implications = 92
+# SearchSpace Leaves = 130
+# nodes = 2553
+# networks = 232
+# conflicts = 0
+
+FUNCTION: 23 = 00.01.01.11
+Iteration 6.
+  SOLUTION: Upper Bound = 6, 0s
+-----------5-----------
+          g_3            
+          / \            
+   g_4           g_5     
+   / \           / \     
+x_1    g_6     x_0  x_2  
+       / \               
+     g_7  g_8            
+      |    |             
+     x_2  x_0            
+                         
+----------------------
+Cost: 6  Level: 4
+g_3(0): [00.01.01.11] - [--.--.--.--] - {} - {}
+g_4(1): [11.10.11.0-] - [--.--.--.--] - {} - {}
+g_5(1): [11.11.10.10] - [--.--.--.--] - {} - {}
+g_6(2): [0-.01.--.1-] - [--.--.--.--] - {} - {}
+g_7(3): [1-.10.1-.1-] - [--.--.--.--] - {} - {}
+g_8(3): [11.11.--.0-] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(2): [00.11.00.11]
+x_2(4): [01.01.01.01]
+-----------5-----------
+time = 0 secs 
+ComputeNetwork was called 24 times
+# Branch Choices = 23
+# Implications = 26
+# Structural Implications = 26
+# SearchSpace Leaves = 28
+# nodes = 456
+# networks = 51
+# conflicts = 0
+
+FUNCTION: 24 = 00.01.10.00
+Iteration 8.
+  SOLUTION: Upper Bound = 7, 0s
+-----------7-----------
+         g_3                  
+          |                   
+         g_4                  
+         / \                  
+  g_5            g_6          
+  / \            / \          
+x_0  x_1    g_7       g_8     
+            / \       / \     
+          x_1  x_2  x_0  g_9  
+                          |   
+                         x_2  
+                              
+----------------------
+Cost: 7  Level: 5
+g_3(0): [00.01.10.00] - [--.--.--.--] - {} - {}
+g_4(1): [11.10.01.11] - [--.--.--.--] - {} - {}
+g_5(2): [11.11.11.00] - [--.--.--.--] - {} - {}
+g_6(2): [00.01.10.11] - [--.--.--.--] - {} - {}
+g_7(3): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_8(3): [11.11.01.0-] - [--.--.--.--] - {} - {}
+g_9(4): [1-.1-.10.1-] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(5): [01.01.01.01]
+-----------7-----------
+time = 0 secs 
+ComputeNetwork was called 30 times
+# Branch Choices = 29
+# Implications = 37
+# Structural Implications = 37
+# SearchSpace Leaves = 38
+# nodes = 674
+# networks = 67
+# conflicts = 0
+
+FUNCTION: 25 = 00.01.10.01
+Iteration 6.
+  SOLUTION: Upper Bound = 7, 0s
+-----------5-----------
+       g_3               
+       / \               
+  g_4        g_5         
+  / \        / \         
+x_1  x_2  g_6    g_7     
+           |      |      
+          x_2    g_8     
+                 / \     
+               g_9  x_0  
+                |        
+               x_1       
+                         
+----------------------
+Cost: 7  Level: 5
+g_3(0): [00.01.10.01] - [--.--.--.--] - {} - {}
+g_4(1): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_5(1): [11.1-.01.1-] - [-*.--.--.--] - {} - {}
+g_6(2): [1-.1-.10.1-] - [--.--.--.--] - {} - {}
+g_7(2): [0-.0-.11.0-] - [--.--.--.--] - {} - {}
+g_8(3): [11.11.00.1-] - [--.--.--.--] - {} - {}
+g_9(4): [11.--.11.0-] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(5): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------5-----------
+time = 0 secs 
+ComputeNetwork was called 46 times
+# Branch Choices = 45
+# Implications = 41
+# Structural Implications = 41
+# SearchSpace Leaves = 53
+# nodes = 983
+# networks = 99
+# conflicts = 1
+
+FUNCTION: 26 = 00.01.10.10
+Iteration 8.
+  SOLUTION: Upper Bound = 6, 0s
+-----------7-----------
+         g_3             
+          |              
+         g_4             
+         / \             
+  g_5           g_6      
+  / \           / \      
+x_0  x_2    g_7     g_8  
+            / \      |   
+          x_1  x_2  x_0  
+                         
+----------------------
+Cost: 6  Level: 4
+g_3(0): [00.01.10.10] - [--.--.--.--] - {} - {}
+g_4(1): [11.10.01.01] - [--.--.--.--] - {} - {}
+g_5(2): [11.11.10.10] - [--.--.--.--] - {} - {}
+g_6(2): [00.01.1-.11] - [--.--.--.--] - {} - {}
+g_7(3): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_8(3): [11.11.0-.0-] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(4): [01.01.01.01]
+-----------7-----------
+time = 0 secs 
+ComputeNetwork was called 12 times
+# Branch Choices = 11
+# Implications = 10
+# Structural Implications = 10
+# SearchSpace Leaves = 15
+# nodes = 240
+# networks = 26
+# conflicts = 1
+
+FUNCTION: 27 = 00.01.10.11
+Iteration 5.
+  SOLUTION: Upper Bound = 4, 0s
+-----------4-----------
+       g_3          
+       / \          
+  g_4       g_5     
+  / \       / \     
+x_1  x_2  g_6  x_0  
+           |        
+          x_2       
+                    
+----------------------
+Cost: 4  Level: 3
+g_3(0): [00.01.10.11] - [--.--.--.--] - {} - {}
+g_4(1): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_5(1): [11.11.01.0-] - [--.--.--.--] - {} - {}
+g_6(2): [1-.1-.10.1-] - [--.--.--.--] - {} - {}
+x_0(2): [00.00.11.11]
+x_1(2): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------4-----------
+time = 0 secs 
+ComputeNetwork was called 5 times
+# Branch Choices = 4
+# Implications = 4
+# Structural Implications = 4
+# SearchSpace Leaves = 5
+# nodes = 68
+# networks = 9
+# conflicts = 1
+
+FUNCTION: 30 = 00.01.11.10
+Iteration 12.
+  SOLUTION: Upper Bound = 8, 0s
+Iteration 11.
+  SOLUTION: Upper Bound = 7, 0s
+Iteration 10.
+  SOLUTION: Upper Bound = 6, 0s
+-----------20-----------
+                   g_3             
+                   / \             
+         g_4                  g_8  
+         / \                       
+  g_5            g_6               
+  / \            / \               
+x_0  x_1    g_7       g_8          
+            / \       / \          
+          x_1  x_2  x_0  g_7       
+                                   
+----------------------
+Cost: 6  Level: 5
+g_3(0): [00.01.11.10] - [--.--.--.--] - {} - {}
+g_4(1): [11.10.00.11] - [--.--.--.--] - {} - {}
+g_5(2): [11.11.11.00] - [--.--.--.--] - {} - {}
+g_6(2): [00.01.11.11] - [--.--.--.--] - {} - {}
+g_7(4): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_8(3): [11.11.00.01] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(5): [00.11.00.11]
+x_2(5): [01.01.01.01]
+-----------20-----------
+time = 0 secs 
+ComputeNetwork was called 19 times
+# Branch Choices = 16
+# Implications = 10
+# Structural Implications = 10
+# SearchSpace Leaves = 24
+# nodes = 390
+# networks = 40
+# conflicts = 1
+
+FUNCTION: 31 = 00.01.11.11
+Iteration 4.
+  SOLUTION: Upper Bound = 3, 0s
+-----------3-----------
+      g_3      
+      / \      
+  g_4     g_5  
+  / \      |   
+x_1  x_2  x_0  
+               
+----------------------
+Cost: 3  Level: 2
+g_3(0): [00.01.11.11] - [--.--.--.--] - {} - {}
+g_4(1): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_5(1): [11.11.00.0-] - [--.--.--.--] - {} - {}
+x_0(2): [00.00.11.11]
+x_1(2): [00.11.00.11]
+x_2(2): [01.01.01.01]
+-----------3-----------
+time = 0 secs 
+ComputeNetwork was called 4 times
+# Branch Choices = 3
+# Implications = 2
+# Structural Implications = 2
+# SearchSpace Leaves = 4
+# nodes = 46
+# networks = 7
+# conflicts = 1
+
+FUNCTION: 40 = 00.10.10.00
+Iteration 8.
+  SOLUTION: Upper Bound = 8, 0s
+Iteration 8.
+  SOLUTION: Upper Bound = 7, 0s
+-----------10-----------
+        g_3                   
+         |                    
+        g_4                   
+        / \                   
+g_5             g_6           
+ |              / \           
+x_2        g_7        g_9     
+           / \        / \     
+       g_8     x_1  x_0  g_8  
+       / \                    
+     x_0  x_1                 
+                              
+----------------------
+Cost: 7  Level: 5
+g_3(0): [00.10.10.00] - [--.--.--.--] - {} - {}
+g_4(1): [11.01.01.11] - [--.--.--.--] - {} - {}
+g_5(2): [1-.10.10.1-] - [--.--.--.--] - {} - {}
+g_6(2): [00.11.11.00] - [--.--.--.--] - {} - {}
+g_7(3): [11.00.11.11] - [--.--.--.--] - {} - {}
+g_8(4): [11.11.11.00] - [--.--.--.--] - {} - {}
+g_9(3): [11.11.00.11] - [--.--.--.--] - {} - {}
+x_0(5): [00.00.11.11]
+x_1(5): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------10-----------
+time = 0 secs 
+ComputeNetwork was called 17 times
+# Branch Choices = 15
+# Implications = 14
+# Structural Implications = 14
+# SearchSpace Leaves = 17
+# nodes = 327
+# networks = 32
+# conflicts = 1
+
+FUNCTION: 41 = 00.10.10.01
+Iteration 15.
+  SOLUTION: Upper Bound = 10, 0s
+Iteration 12.
+  SOLUTION: Upper Bound = 9, 0s
+Iteration 11.
+  SOLUTION: Upper Bound = 8, 0s
+-----------39-----------
+                         g_3                 
+                         / \                 
+            g_4                      g_10    
+            / \                      / \     
+   g_5                g_6          x_2  g_5  
+   / \                / \                    
+x_2    g_8       g_7       g_9               
+       / \       / \       / \               
+     x_0  x_1  g_8  x_1  x_0  g_8            
+                                             
+----------------------
+Cost: 8  Level: 5
+g_3(0): [00.10.10.01] - [--.--.--.--] - {} - {}
+g_4(1): [11.01.01.11] - [--.--.--.--] - {} - {}
+g_5(2): [10.10.10.11] - [--.--.--.--] - {} - {}
+g_6(2): [00.11.11.00] - [--.--.--.--] - {} - {}
+g_7(3): [11.00.11.11] - [--.--.--.--] - {} - {}
+g_8(4): [11.11.11.00] - [--.--.--.--] - {} - {}
+g_9(3): [11.11.00.11] - [--.--.--.--] - {} - {}
+g_10(1): [11.11.11.10] - [--.--.--.--] - {} - {}
+x_0(5): [00.00.11.11]
+x_1(5): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------39-----------
+time = 0 secs 
+ComputeNetwork was called 51 times
+# Branch Choices = 47
+# Implications = 42
+# Structural Implications = 41
+# SearchSpace Leaves = 60
+# nodes = 1244
+# networks = 109
+# conflicts = 2
+
+FUNCTION: 42 = 00.10.10.10
+Iteration 6.
+  SOLUTION: Upper Bound = 5, 0s
+Iteration 5.
+  SOLUTION: Upper Bound = 4, 0s
+-----------7-----------
+       g_3          
+       / \          
+  g_4       g_6     
+  / \       / \     
+g_5  x_1  x_0  g_5  
+ |                  
+x_2                 
+                    
+----------------------
+Cost: 4  Level: 3
+g_3(0): [00.10.10.10] - [--.--.--.--] - {} - {}
+g_4(1): [11.01.11.01] - [--.--.--.--] - {} - {}
+g_5(2): [1-.10.10.10] - [--.--.--.--] - {} - {}
+g_6(1): [11.11.01.01] - [--.--.--.--] - {} - {}
+x_0(2): [00.00.11.11]
+x_1(2): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------7-----------
+time = 0 secs 
+ComputeNetwork was called 7 times
+# Branch Choices = 5
+# Implications = 3
+# Structural Implications = 3
+# SearchSpace Leaves = 6
+# nodes = 85
+# networks = 11
+# conflicts = 2
+
+FUNCTION: 43 = 00.10.10.11
+Iteration 9.
+  SOLUTION: Upper Bound = 6, 0s
+Iteration 9.
+  SOLUTION: Upper Bound = 5, 0s
+-----------13-----------
+               g_3            
+               / \            
+         g_4          g_6     
+         / \          / \     
+   g_5         x_1  x_0  g_7  
+   / \                        
+x_2    g_7                    
+       / \                    
+     x_2  x_0                 
+                              
+----------------------
+Cost: 5  Level: 4
+g_3(0): [00.10.10.11] - [--.--.--.--] - {} - {}
+g_4(1): [11.01.11.00] - [--.--.--.--] - {} - {}
+g_5(2): [10.10.11.11] - [--.--.--.--] - {} - {}
+g_6(1): [11.11.01.01] - [--.--.--.--] - {} - {}
+g_7(3): [11.11.10.10] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(2): [00.11.00.11]
+x_2(4): [01.01.01.01]
+-----------13-----------
+time = 0 secs 
+ComputeNetwork was called 11 times
+# Branch Choices = 9
+# Implications = 7
+# Structural Implications = 7
+# SearchSpace Leaves = 12
+# nodes = 178
+# networks = 21
+# conflicts = 2
+
+FUNCTION: 44 = 00.10.11.00
+Iteration 10.
+  SOLUTION: Upper Bound = 8, 0s
+Iteration 10.
+  SOLUTION: Upper Bound = 7, 0s
+-----------19-----------
+           g_3                     
+            |                      
+           g_4                     
+           / \                     
+  g_5                g_6           
+  / \                / \           
+x_2  x_1        g_7        g_9     
+                / \        / \     
+            g_8     x_1  x_0  g_8  
+            / \                    
+          x_0  x_1                 
+                                   
+----------------------
+Cost: 7  Level: 5
+g_3(0): [00.10.11.00] - [--.--.--.--] - {} - {}
+g_4(1): [11.01.00.11] - [--.--.--.--] - {} - {}
+g_5(2): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_6(2): [00.11.11.00] - [--.--.--.--] - {} - {}
+g_7(3): [11.00.11.11] - [--.--.--.--] - {} - {}
+g_8(4): [11.11.11.00] - [--.--.--.--] - {} - {}
+g_9(3): [11.11.00.11] - [--.--.--.--] - {} - {}
+x_0(5): [00.00.11.11]
+x_1(5): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------19-----------
+time = 0 secs 
+ComputeNetwork was called 21 times
+# Branch Choices = 19
+# Implications = 14
+# Structural Implications = 14
+# SearchSpace Leaves = 26
+# nodes = 472
+# networks = 45
+# conflicts = 2
+
+FUNCTION: 45 = 00.10.11.01
+Iteration 15.
+  SOLUTION: Upper Bound = 10, 0s
+Iteration 16.
+  SOLUTION: Upper Bound = 9, 0s
+Iteration 12.
+  SOLUTION: Upper Bound = 8, 0s
+Iteration 11.
+  SOLUTION: Upper Bound = 7, 0s
+-----------83-----------
+                      g_3          
+                      / \          
+              g_4             g_9  
+              / \                  
+       g_5            g_8          
+       / \            / \          
+  g_6       g_9     x_0  x_1       
+  / \       / \                    
+g_7  x_1  x_0  g_6                 
+ |                                 
+x_2                                
+                                   
+----------------------
+Cost: 7  Level: 6
+g_3(0): [00.10.11.01] - [--.--.--.--] - {} - {}
+g_4(1): [11.01.00.11] - [--.--.--.--] - {} - {}
+g_5(2): [00.10.11.11] - [--.--.--.--] - {} - {x_2}
+g_6(4): [11.01.11.01] - [--.--.--.--] - {} - {}
+g_7(5): [1-.10.1-.10] - [--.--.--.--] - {} - {}
+g_8(2): [11.11.11.00] - [--.--.--.--] - {} - {}
+g_9(3): [11.11.00.10] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(5): [00.11.00.11]
+x_2(6): [01.01.01.01]
+-----------83-----------
+time = 0 secs 
+ComputeNetwork was called 44 times
+# Branch Choices = 40
+# Implications = 25
+# Structural Implications = 25
+# SearchSpace Leaves = 54
+# nodes = 1058
+# networks = 94
+# conflicts = 2
+
+FUNCTION: 46 = 00.10.11.10
+Iteration 6.
+  SOLUTION: Upper Bound = 5, 0s
+Iteration 6.
+  SOLUTION: Upper Bound = 4, 0s
+-----------8-----------
+           g_3           
+           / \           
+      g_4        g_6     
+      / \        / \     
+  g_5     x_1  x_0  g_5  
+  / \                    
+x_2  x_1                 
+                         
+----------------------
+Cost: 4  Level: 3
+g_3(0): [00.10.11.10] - [--.--.--.--] - {} - {}
+g_4(1): [11.01.11.01] - [--.--.--.--] - {} - {}
+g_5(2): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_6(1): [11.11.00.01] - [--.--.--.--] - {} - {}
+x_0(2): [00.00.11.11]
+x_1(3): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------8-----------
+time = 0 secs 
+ComputeNetwork was called 8 times
+# Branch Choices = 6
+# Implications = 3
+# Structural Implications = 3
+# SearchSpace Leaves = 7
+# nodes = 101
+# networks = 13
+# conflicts = 2
+
+FUNCTION: 47 = 00.10.11.11
+Iteration 4.
+  SOLUTION: Upper Bound = 4, 0s
+-----------3-----------
+      g_3      
+      / \      
+  g_4     g_6  
+  / \      |   
+g_5  x_1  x_0  
+ |             
+x_2            
+               
+----------------------
+Cost: 4  Level: 3
+g_3(0): [00.10.11.11] - [--.--.--.-*] - {} - {}
+g_4(1): [11.01.11.0-] - [--.--.--.--] - {} - {}
+g_5(2): [1-.10.1-.1-] - [--.--.--.--] - {} - {}
+g_6(1): [11.11.00.--] - [--.--.--.--] - {} - {}
+x_0(2): [00.00.11.11]
+x_1(2): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------3-----------
+time = 0 secs 
+ComputeNetwork was called 4 times
+# Branch Choices = 3
+# Implications = 3
+# Structural Implications = 3
+# SearchSpace Leaves = 4
+# nodes = 51
+# networks = 7
+# conflicts = 2
+
+FUNCTION: 61 = 00.11.11.01
+Iteration 9.
+  SOLUTION: Upper Bound = 6, 0s
+-----------8-----------
+           g_3           
+           / \           
+      g_4        g_6     
+      / \        / \     
+  g_5     x_1  x_0  g_7  
+  / \                |   
+x_0  g_8            x_1  
+      |                  
+     x_2                 
+                         
+----------------------
+Cost: 6  Level: 4
+g_3(0): [00.11.11.01] - [--.--.--.--] - {} - {}
+g_4(1): [11.00.11.10] - [--.--.--.--] - {} - {}
+g_5(2): [11.11.0-.01] - [--.--.--.--] - {} - {}
+g_6(1): [11.11.00.1-] - [--.--.--.--] - {} - {}
+g_7(2): [11.--.11.0-] - [--.--.--.--] - {} - {}
+g_8(3): [1-.1-.1-.10] - [--.--.--.--] - {} - {}
+x_0(3): [00.00.11.11]
+x_1(3): [00.11.00.11]
+x_2(4): [01.01.01.01]
+-----------8-----------
+time = 0 secs 
+ComputeNetwork was called 17 times
+# Branch Choices = 16
+# Implications = 15
+# Structural Implications = 15
+# SearchSpace Leaves = 19
+# nodes = 312
+# networks = 35
+# conflicts = 2
+
+FUNCTION: 62 = 00.11.11.10
+Iteration 8.
+  SOLUTION: Upper Bound = 5, 0s
+-----------7-----------
+           g_3           
+           / \           
+      g_4        g_6     
+      / \        / \     
+  g_5     x_1  x_0  g_7  
+  / \                |   
+x_0  x_2            x_1  
+                         
+----------------------
+Cost: 5  Level: 3
+g_3(0): [00.11.11.10] - [--.--.--.--] - {} - {}
+g_4(1): [11.00.11.01] - [--.--.--.--] - {} - {}
+g_5(2): [11.11.10.10] - [--.--.--.--] - {} - {}
+g_6(1): [11.11.00.-1] - [--.--.--.--] - {} - {}
+g_7(2): [11.--.11.-0] - [--.--.--.--] - {} - {}
+x_0(3): [00.00.11.11]
+x_1(3): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------7-----------
+time = 0 secs 
+ComputeNetwork was called 10 times
+# Branch Choices = 9
+# Implications = 11
+# Structural Implications = 11
+# SearchSpace Leaves = 12
+# nodes = 171
+# networks = 21
+# conflicts = 2
+
+FUNCTION: 104 = 01.10.10.00
+Iteration 15.
+  SOLUTION: Upper Bound = 13, 0s
+Iteration 14.
+  SOLUTION: Upper Bound = 12, 0s
+Iteration 14.
+  SOLUTION: Upper Bound = 11, 0s
+Iteration 16.
+  SOLUTION: Upper Bound = 10, 0s
+-----------111-----------
+                                  g_3                   
+                                  / \                   
+                    g_4                        g_10     
+                    / \                         / \     
+       g_5                       g_6         g_11  g_5  
+       / \                       / \                    
+x_1           g_11            g_7    g_9                
+               / \                   / \                
+        g_12          g_7          x_1  g_8             
+        / \           / \                               
+     x_0    g_8     g_8  x_2                            
+            / \                                         
+          x_0  x_2                                      
+                                                        
+----------------------
+Cost: 10  Level: 6
+g_3(0): [01.10.10.00] - [--.--.--.--] - {} - {}
+g_4(1): [10.01.11.11] - [--.--.--.--] - {} - {}
+g_5(2): [11.10.11.01] - [--.--.--.--] - {} - {x_2, g_9}
+g_6(2): [01.11.00.10] - [--.--.--.--] - {} - {}
+g_7(4): [10.10.11.11] - [--.--.--.--] - {} - {}
+g_8(5): [11.11.10.10] - [--.--.--.--] - {} - {}
+g_9(3): [11.00.11.01] - [--.--.--.--] - {} - {}
+g_10(1): [10.11.01.11] - [--.--.--.--] - {} - {x_0}
+g_11(3): [01.01.10.10] - [--.--.--.--] - {} - {}
+g_12(4): [11.11.01.01] - [--.--.--.--] - {} - {}
+x_0(6): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(6): [01.01.01.01]
+-----------111-----------
+time = 1 secs 
+ComputeNetwork was called 535 times
+# Branch Choices = 529
+# Implications = 478
+# Structural Implications = 476
+# SearchSpace Leaves = 719
+# nodes = 16541
+# networks = 1267
+# conflicts = 19
+
+FUNCTION: 105 = 01.10.10.01
+Iteration 20.
+  SOLUTION: Upper Bound = 15, 0s
+Iteration 19.
+  SOLUTION: Upper Bound = 14, 0s
+Iteration 18.
+  SOLUTION: Upper Bound = 13, 0s
+Iteration 17.
+  SOLUTION: Upper Bound = 12, 0s
+Iteration 16.
+  SOLUTION: Upper Bound = 11, 0s
+Iteration 15.
+  SOLUTION: Upper Bound = 10, 0s
+Iteration 11.
+  SOLUTION: Upper Bound = 8, 0s
+-----------187-----------
+                            g_3              
+                            / \              
+                   g_4               g_9     
+                   / \               / \     
+        g_5                   g_6  x_1  g_5  
+        / \                                  
+x_1              g_6                         
+                 / \                         
+           g_7        g_10                   
+           / \        / \                    
+       g_8     x_2  x_0  g_8                 
+       / \                                   
+     x_0  x_2                                
+                                             
+----------------------
+Cost: 8  Level: 6
+g_3(0): [01.10.10.01] - [--.--.--.--] - {} - {}
+g_4(1): [10.11.01.11] - [--.--.--.--] - {} - {}
+g_5(2): [11.10.11.01] - [--.--.--.--] - {} - {}
+g_6(3): [01.01.10.10] - [--.--.--.--] - {} - {}
+g_7(4): [10.10.11.11] - [--.--.--.--] - {} - {}
+g_8(5): [11.11.10.10] - [--.--.--.--] - {} - {}
+g_9(1): [11.01.11.10] - [--.--.--.--] - {} - {}
+g_10(4): [11.11.01.01] - [--.--.--.--] - {} - {}
+x_0(6): [00.00.11.11]
+x_1(3): [00.11.00.11]
+x_2(6): [01.01.01.01]
+-----------187-----------
+time = 0 secs 
+ComputeNetwork was called 91 times
+# Branch Choices = 82
+# Implications = 59
+# Structural Implications = 57
+# SearchSpace Leaves = 139
+# nodes = 3166
+# networks = 228
+# conflicts = 24
+
+FUNCTION: 106 = 01.10.10.10
+Iteration 10.
+  SOLUTION: Upper Bound = 9, 0s
+Iteration 10.
+  SOLUTION: Upper Bound = 8, 0s
+Iteration 9.
+  SOLUTION: Upper Bound = 7, 0s
+-----------34-----------
+                g_3           
+                / \           
+          g_4         g_9     
+          / \         / \     
+      g_5      x_2  g_6  g_5  
+      / \                     
+  g_6     x_2                 
+  / \                         
+g_7  g_8                      
+ |    |                       
+x_1  x_0                      
+                              
+----------------------
+Cost: 7  Level: 5
+g_3(0): [01.10.10.10] - [--.--.--.--] - {} - {}
+g_4(1): [10.11.11.11] - [--.--.--.--] - {} - {}
+g_5(2): [11.10.10.10] - [--.--.--.--] - {} - {x_0, x_1}
+g_6(3): [00.11.11.11] - [--.--.--.**] - {} - {}
+g_7(4): [11.00.11.--] - [--.--.--.--] - {} - {}
+g_8(4): [11.11.00.--] - [--.--.--.--] - {} - {}
+g_9(1): [11.01.01.01] - [--.--.--.--] - {} - {}
+x_0(5): [00.00.11.11]
+x_1(5): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------34-----------
+time = 0 secs 
+ComputeNetwork was called 25 times
+# Branch Choices = 22
+# Implications = 20
+# Structural Implications = 20
+# SearchSpace Leaves = 27
+# nodes = 534
+# networks = 49
+# conflicts = 24
+
+FUNCTION: 107 = 01.10.10.11
+Iteration 12.
+  SOLUTION: Upper Bound = 10, 0s
+Iteration 11.
+  SOLUTION: Upper Bound = 9, 0s
+Iteration 11.
+  SOLUTION: Upper Bound = 8, 0s
+-----------24-----------
+                           g_3               
+                           / \               
+                g_4                  g_10    
+                / \                  / \     
+     g_5                   g_6     x_0  g_8  
+     / \                   / \               
+x_1       g_9            g_7  g_9            
+          / \                                
+     x_1        g_7                          
+                / \                          
+            g_8     x_2                      
+            / \                              
+          x_0  x_2                           
+                                             
+----------------------
+Cost: 8  Level: 6
+g_3(0): [01.10.10.11] - [--.--.--.--] - {} - {}
+g_4(1): [10.01.11.00] - [--.--.--.--] - {} - {}
+g_5(2): [11.10.11.11] - [--.--.--.--] - {} - {}
+g_6(2): [01.11.00.11] - [--.--.--.--] - {} - {}
+g_7(4): [10.10.11.11] - [--.--.--.--] - {} - {}
+g_8(5): [11.11.10.10] - [--.--.--.--] - {} - {}
+g_9(3): [11.01.11.00] - [--.--.--.--] - {} - {}
+g_10(1): [11.11.01.01] - [--.--.--.--] - {} - {}
+x_0(6): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(6): [01.01.01.01]
+-----------24-----------
+time = 0 secs 
+ComputeNetwork was called 33 times
+# Branch Choices = 30
+# Implications = 29
+# Structural Implications = 29
+# SearchSpace Leaves = 39
+# nodes = 780
+# networks = 69
+# conflicts = 24
+
+FUNCTION: 110 = 01.10.11.10
+Iteration 12.
+  SOLUTION: Upper Bound = 9, 0s
+Iteration 11.
+  SOLUTION: Upper Bound = 8, 0s
+Iteration 11.
+  SOLUTION: Upper Bound = 7, 0s
+-----------23-----------
+              g_3                  
+              / \                  
+      g_4             g_6          
+      / \              |           
+  g_5     x_2         g_7          
+  / \                 / \          
+x_1  x_2         g_8       g_9     
+                 / \       / \     
+               x_0  g_5  x_1  g_5  
+                                   
+----------------------
+Cost: 7  Level: 5
+g_3(0): [01.10.11.10] - [--.--.--.--] - {} - {}
+g_4(1): [10.11.10.11] - [--.--.--.--] - {} - {}
+g_5(4): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_6(1): [11.01.0-.01] - [--.--.--.--] - {} - {}
+g_7(2): [00.10.11.10] - [--.--.--.--] - {} - {}
+g_8(3): [11.11.00.01] - [--.--.--.--] - {} - {}
+g_9(3): [11.01.11.01] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(5): [00.11.00.11]
+x_2(5): [01.01.01.01]
+-----------23-----------
+time = 0 secs 
+ComputeNetwork was called 33 times
+# Branch Choices = 30
+# Implications = 27
+# Structural Implications = 27
+# SearchSpace Leaves = 40
+# nodes = 726
+# networks = 70
+# conflicts = 24
+
+FUNCTION: 111 = 01.10.11.11
+Iteration 9.
+  SOLUTION: Upper Bound = 8, 0s
+Iteration 9.
+  SOLUTION: Upper Bound = 7, 0s
+-----------11-----------
+            g_3               
+            / \               
+      g_4         g_6         
+      / \          |          
+  g_5     x_2     g_7         
+  / \             / \         
+x_1  x_2       g_8    g_9     
+                |     / \     
+               x_0  x_1  g_5  
+                              
+----------------------
+Cost: 7  Level: 5
+g_3(0): [01.10.11.11] - [--.--.--.--] - {} - {}
+g_4(1): [10.11.10.11] - [--.--.--.--] - {} - {}
+g_5(4): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_6(1): [11.01.0-.00] - [--.--.--.--] - {} - {}
+g_7(2): [00.10.1-.11] - [--.--.--.--] - {} - {}
+g_8(3): [11.11.0-.-0] - [--.--.--.--] - {} - {}
+g_9(3): [11.01.11.01] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(5): [00.11.00.11]
+x_2(5): [01.01.01.01]
+-----------11-----------
+time = 0 secs 
+ComputeNetwork was called 27 times
+# Branch Choices = 25
+# Implications = 27
+# Structural Implications = 27
+# SearchSpace Leaves = 30
+# nodes = 553
+# networks = 55
+# conflicts = 24
+
+FUNCTION: 126 = 01.11.11.10
+Iteration 13.
+  SOLUTION: Upper Bound = 9, 0s
+Iteration 12.
+  SOLUTION: Upper Bound = 8, 0s
+Iteration 7.
+  SOLUTION: Upper Bound = 7, 0s
+-----------41-----------
+         g_3                  
+         / \                  
+  g_4            g_6          
+  / \            / \          
+g_5  x_2    g_7       g_9     
+ |          / \       / \     
+x_0       g_8  g_5  x_1  x_2  
+           |                  
+          x_1                 
+                              
+----------------------
+Cost: 7  Level: 4
+g_3(0): [01.11.11.10] - [--.--.-*.--] - {} - {}
+g_4(1): [10.10.1-.11] - [--.--.--.--] - {} - {}
+g_5(3): [11.11.0-.-0] - [--.--.--.--] - {} - {}
+g_6(1): [11.01.0-.01] - [--.--.--.--] - {} - {}
+g_7(2): [00.1-.1-.11] - [--.--.--.*-] - {} - {}
+g_8(3): [11.0-.11.--] - [--.--.--.--] - {} - {}
+g_9(2): [11.10.11.10] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------41-----------
+time = 0 secs 
+ComputeNetwork was called 39 times
+# Branch Choices = 35
+# Implications = 27
+# Structural Implications = 26
+# SearchSpace Leaves = 46
+# nodes = 876
+# networks = 83
+# conflicts = 25
+
+FUNCTION: 127 = 01.11.11.11
+Iteration 4.
+  SOLUTION: Upper Bound = 6, 0s
+-----------3-----------
+   g_3         
+   / \         
+g_4    g_5     
+ |      |      
+x_2    g_6     
+       / \     
+     g_7  g_8  
+      |    |   
+     x_1  x_0  
+               
+----------------------
+Cost: 6  Level: 4
+g_3(0): [01.11.11.11] - [--.-*.-*.-*] - {} - {}
+g_4(1): [10.1-.1-.1-] - [--.--.--.--] - {} - {}
+g_5(1): [11.0-.0-.0-] - [--.--.--.--] - {} - {}
+g_6(2): [00.1-.1-.1-] - [--.--.--.*-] - {} - {}
+g_7(3): [11.0-.11.--] - [--.--.--.--] - {} - {}
+g_8(3): [11.11.0-.--] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(2): [01.01.01.01]
+-----------3-----------
+time = 0 secs 
+ComputeNetwork was called 8 times
+# Branch Choices = 7
+# Implications = 13
+# Structural Implications = 13
+# SearchSpace Leaves = 9
+# nodes = 143
+# networks = 16
+# conflicts = 25
+
+FUNCTION: 128 = 10.00.00.00
+Iteration 4.
+  SOLUTION: Upper Bound = 7, 0s
+-----------3-----------
+   g_3         
+    |          
+   g_4         
+   / \         
+g_5    g_6     
+ |      |      
+x_2    g_7     
+       / \     
+     g_8  g_9  
+      |    |   
+     x_1  x_0  
+               
+----------------------
+Cost: 7  Level: 5
+g_3(0): [10.00.00.00] - [--.--.--.--] - {} - {}
+g_4(1): [01.11.11.11] - [--.-*.-*.-*] - {} - {}
+g_5(2): [10.1-.1-.1-] - [--.--.--.--] - {} - {}
+g_6(2): [11.0-.0-.0-] - [--.--.--.--] - {} - {}
+g_7(3): [00.1-.1-.1-] - [--.--.--.*-] - {} - {}
+g_8(4): [11.0-.11.--] - [--.--.--.--] - {} - {}
+g_9(4): [11.11.0-.--] - [--.--.--.--] - {} - {}
+x_0(5): [00.00.11.11]
+x_1(5): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------3-----------
+time = 0 secs 
+ComputeNetwork was called 8 times
+# Branch Choices = 7
+# Implications = 14
+# Structural Implications = 14
+# SearchSpace Leaves = 9
+# nodes = 159
+# networks = 16
+# conflicts = 25
+
+FUNCTION: 129 = 10.00.00.01
+Iteration 13.
+  SOLUTION: Upper Bound = 10, 0s
+Iteration 12.
+  SOLUTION: Upper Bound = 9, 0s
+Iteration 9.
+  SOLUTION: Upper Bound = 8, 0s
+-----------41-----------
+         g_3                  
+          |                   
+         g_4                  
+         / \                  
+  g_5            g_6          
+  / \            / \          
+x_2  g_8    g_7       g_10    
+      |     / \       / \     
+     x_1  g_8  g_9  x_0  x_2  
+                |             
+               x_0            
+                              
+----------------------
+Cost: 8  Level: 5
+g_3(0): [10.00.00.01] - [--.--.--.--] - {} - {}
+g_4(1): [01.11.11.10] - [--.-*.--.--] - {} - {}
+g_5(2): [10.1-.10.11] - [--.--.--.--] - {} - {}
+g_6(2): [11.0-.01.01] - [--.--.--.--] - {} - {}
+g_7(3): [00.1-.1-.11] - [--.--.--.*-] - {} - {}
+g_8(4): [11.0-.11.-0] - [--.--.--.--] - {} - {}
+g_9(4): [11.11.0-.--] - [--.--.--.--] - {} - {}
+g_10(3): [11.11.10.10] - [--.--.--.--] - {} - {}
+x_0(5): [00.00.11.11]
+x_1(5): [00.11.00.11]
+x_2(4): [01.01.01.01]
+-----------41-----------
+time = 0 secs 
+ComputeNetwork was called 37 times
+# Branch Choices = 33
+# Implications = 24
+# Structural Implications = 23
+# SearchSpace Leaves = 46
+# nodes = 937
+# networks = 81
+# conflicts = 26
+
+FUNCTION: 130 = 10.00.00.10
+Iteration 9.
+  SOLUTION: Upper Bound = 9, 0s
+Iteration 9.
+  SOLUTION: Upper Bound = 8, 0s
+-----------11-----------
+        g_3                    
+         |                     
+        g_4                    
+        / \                    
+g_5             g_6            
+ |               |             
+x_2             g_7            
+                / \            
+         g_8           g_9     
+         / \           / \     
+     x_1    g_10    x_0  g_10  
+            / \                
+          x_1  x_0             
+                               
+----------------------
+Cost: 8  Level: 6
+g_3(0): [10.00.00.10] - [--.--.--.--] - {} - {}
+g_4(1): [01.11.11.01] - [--.-*.-*.--] - {} - {}
+g_5(2): [10.1-.1-.10] - [--.--.--.--] - {} - {}
+g_6(2): [11.0-.0-.11] - [--.--.--.--] - {} - {}
+g_7(3): [00.11.11.00] - [--.--.--.--] - {} - {}
+g_8(4): [11.00.11.11] - [--.--.--.--] - {} - {}
+g_9(4): [11.11.00.11] - [--.--.--.--] - {} - {}
+g_10(5): [11.11.11.00] - [--.--.--.--] - {} - {}
+x_0(6): [00.00.11.11]
+x_1(6): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------11-----------
+time = 0 secs 
+ComputeNetwork was called 24 times
+# Branch Choices = 22
+# Implications = 22
+# Structural Implications = 22
+# SearchSpace Leaves = 25
+# nodes = 517
+# networks = 47
+# conflicts = 26
+
+FUNCTION: 131 = 10.00.00.11
+Iteration 12.
+  SOLUTION: Upper Bound = 10, 0s
+Iteration 11.
+  SOLUTION: Upper Bound = 9, 0s
+Iteration 11.
+  SOLUTION: Upper Bound = 8, 0s
+-----------30-----------
+             g_3                     
+              |                      
+             g_4                     
+             / \                     
+    g_5                g_6           
+    / \                 |            
+x_2    g_10            g_7           
+       / \             / \           
+     x_1  x_0     g_8        g_9     
+                  / \        / \     
+               x_1  g_10  x_0  g_10  
+                                     
+----------------------
+Cost: 8  Level: 6
+g_3(0): [10.00.00.11] - [--.--.--.--] - {} - {}
+g_4(1): [01.11.11.00] - [--.--.--.--] - {} - {}
+g_5(2): [10.10.10.11] - [--.--.--.--] - {} - {}
+g_6(2): [11.0-.0-.11] - [--.--.--.--] - {} - {}
+g_7(3): [00.11.11.00] - [--.--.--.--] - {} - {}
+g_8(4): [11.00.11.11] - [--.--.--.--] - {} - {}
+g_9(4): [11.11.00.11] - [--.--.--.--] - {} - {}
+g_10(5): [11.11.11.00] - [--.--.--.--] - {} - {}
+x_0(6): [00.00.11.11]
+x_1(6): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------30-----------
+time = 0 secs 
+ComputeNetwork was called 32 times
+# Branch Choices = 29
+# Implications = 24
+# Structural Implications = 24
+# SearchSpace Leaves = 40
+# nodes = 796
+# networks = 69
+# conflicts = 26
+
+FUNCTION: 134 = 10.00.01.10
+Iteration 15.
+  SOLUTION: Upper Bound = 11, 0s
+Iteration 14.
+  SOLUTION: Upper Bound = 10, 0s
+Iteration 13.
+  SOLUTION: Upper Bound = 9, 0s
+-----------34-----------
+                  g_3                         
+                   |                          
+                  g_4                         
+                  / \                         
+    g_5                         g_6           
+    / \                         / \           
+x_2    g_10              g_7          g_11    
+       / \               / \          / \     
+     x_2  x_0      g_8         g_9  x_1  g_8  
+                   / \                        
+               x_1     g_9                    
+                       / \                    
+                    x_0  g_10                 
+                                              
+----------------------
+Cost: 9  Level: 7
+g_3(0): [10.00.01.10] - [--.--.--.--] - {} - {}
+g_4(1): [01.11.10.01] - [--.--.--.--] - {} - {}
+g_5(2): [10.10.11.11] - [--.--.--.--] - {} - {}
+g_6(2): [11.00.01.10] - [--.--.--.--] - {} - {}
+g_7(3): [00.11.10.11] - [--.--.--.--] - {} - {}
+g_8(4): [11.00.11.10] - [--.--.--.--] - {} - {}
+g_9(5): [11.11.01.01] - [--.--.--.--] - {} - {}
+g_10(6): [11.11.10.10] - [--.--.--.--] - {} - {}
+g_11(3): [11.11.11.01] - [--.--.--.--] - {} - {}
+x_0(7): [00.00.11.11]
+x_1(5): [00.11.00.11]
+x_2(7): [01.01.01.01]
+-----------34-----------
+time = 0 secs 
+ComputeNetwork was called 97 times
+# Branch Choices = 93
+# Implications = 72
+# Structural Implications = 71
+# SearchSpace Leaves = 124
+# nodes = 2643
+# networks = 219
+# conflicts = 27
+
+FUNCTION: 135 = 10.00.01.11
+Iteration 13.
+  SOLUTION: Upper Bound = 10, 0s
+Iteration 12.
+  SOLUTION: Upper Bound = 9, 0s
+Iteration 11.
+  SOLUTION: Upper Bound = 8, 0s
+-----------83-----------
+                      g_3           
+                      / \           
+              g_4             g_10  
+              / \                   
+       g_5            g_9           
+       / \            / \           
+  g_6       g_10    x_0  g_7        
+  / \       / \                     
+g_7  g_8  x_0  g_6                  
+ |    |                             
+x_2  x_1                            
+                                    
+----------------------
+Cost: 8  Level: 6
+g_3(0): [10.00.01.11] - [--.--.--.-*] - {} - {}
+g_4(1): [01.11.10.1-] - [--.--.--.--] - {} - {}
+g_5(2): [10.00.11.1-] - [--.--.--.--] - {} - {x_1, x_2}
+g_6(4): [01.11.01.1-] - [--.-*.--.--] - {} - {}
+g_7(5): [10.1-.10.1-] - [--.--.--.--] - {} - {}
+g_8(5): [11.0-.11.0-] - [--.--.--.--] - {} - {}
+g_9(2): [11.11.01.0-] - [--.--.--.--] - {} - {}
+g_10(3): [11.11.10.0-] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(6): [00.11.00.11]
+x_2(6): [01.01.01.01]
+-----------83-----------
+time = 0 secs 
+ComputeNetwork was called 51 times
+# Branch Choices = 48
+# Implications = 35
+# Structural Implications = 35
+# SearchSpace Leaves = 61
+# nodes = 1286
+# networks = 109
+# conflicts = 27
+
+FUNCTION: 137 = 10.00.10.01
+Iteration 9.
+  SOLUTION: Upper Bound = 6, 0s
+-----------8-----------
+          g_3            
+           |             
+          g_4            
+          / \            
+   g_5           g_6     
+   / \           / \     
+x_2    g_8     x_1  g_7  
+       / \           |   
+     x_1  x_0       x_2  
+                         
+----------------------
+Cost: 6  Level: 4
+g_3(0): [10.00.10.01] - [--.--.--.--] - {} - {}
+g_4(1): [01.11.01.10] - [--.--.--.--] - {} - {}
+g_5(2): [10.10.10.11] - [--.--.--.--] - {} - {}
+g_6(2): [11.0-.11.01] - [--.--.--.--] - {} - {}
+g_7(3): [1-.1-.1-.10] - [--.--.--.--] - {} - {}
+g_8(3): [11.11.11.00] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(4): [01.01.01.01]
+-----------8-----------
+time = 0 secs 
+ComputeNetwork was called 16 times
+# Branch Choices = 15
+# Implications = 13
+# Structural Implications = 13
+# SearchSpace Leaves = 18
+# nodes = 300
+# networks = 33
+# conflicts = 27
+
+FUNCTION: 138 = 10.00.10.10
+Iteration 5.
+  SOLUTION: Upper Bound = 5, 0s
+-----------4-----------
+   g_3         
+    |          
+   g_4         
+   / \         
+g_5    g_6     
+ |     / \     
+x_2  x_1  g_7  
+           |   
+          x_0  
+               
+----------------------
+Cost: 5  Level: 4
+g_3(0): [10.00.10.10] - [--.--.--.--] - {} - {}
+g_4(1): [01.11.01.01] - [--.--.--.-*] - {} - {}
+g_5(2): [10.1-.10.1-] - [--.--.--.--] - {} - {}
+g_6(2): [11.00.11.1-] - [--.--.--.--] - {} - {}
+g_7(3): [11.11.--.0-] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(3): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------4-----------
+time = 0 secs 
+ComputeNetwork was called 5 times
+# Branch Choices = 4
+# Implications = 5
+# Structural Implications = 5
+# SearchSpace Leaves = 5
+# nodes = 73
+# networks = 9
+# conflicts = 27
+
+FUNCTION: 139 = 10.00.10.11
+Iteration 8.
+  SOLUTION: Upper Bound = 6, 0s
+Iteration 8.
+  SOLUTION: Upper Bound = 5, 0s
+-----------10-----------
+          g_3            
+           |             
+          g_4            
+          / \            
+   g_5           g_6     
+   / \           / \     
+x_2    g_7     x_1  g_7  
+       / \               
+     x_0  x_1            
+                         
+----------------------
+Cost: 5  Level: 4
+g_3(0): [10.00.10.11] - [--.--.--.--] - {} - {}
+g_4(1): [01.11.01.00] - [--.--.--.--] - {} - {}
+g_5(2): [10.10.10.11] - [--.--.--.--] - {} - {}
+g_6(2): [11.00.11.11] - [--.--.--.--] - {} - {}
+g_7(3): [11.11.11.00] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------10-----------
+time = 0 secs 
+ComputeNetwork was called 10 times
+# Branch Choices = 8
+# Implications = 5
+# Structural Implications = 5
+# SearchSpace Leaves = 10
+# nodes = 155
+# networks = 18
+# conflicts = 27
+
+FUNCTION: 142 = 10.00.11.10
+Iteration 11.
+  SOLUTION: Upper Bound = 7, 0s
+Iteration 11.
+  SOLUTION: Upper Bound = 6, 0s
+-----------15-----------
+             g_3              
+              |               
+             g_4              
+             / \              
+    g_5               g_6     
+    / \               / \     
+x_2     g_7         x_1  g_8  
+        / \                   
+     x_0    g_8               
+            / \               
+          x_0  x_1            
+                              
+----------------------
+Cost: 6  Level: 5
+g_3(0): [10.00.11.10] - [--.--.--.--] - {} - {}
+g_4(1): [01.11.00.01] - [--.--.--.--] - {} - {}
+g_5(2): [10.10.11.10] - [--.--.--.--] - {} - {}
+g_6(2): [11.00.11.11] - [--.--.--.--] - {} - {}
+g_7(3): [11.11.00.11] - [--.--.--.--] - {} - {}
+g_8(4): [11.11.11.00] - [--.--.--.--] - {} - {}
+x_0(5): [00.00.11.11]
+x_1(5): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------15-----------
+time = 0 secs 
+ComputeNetwork was called 17 times
+# Branch Choices = 15
+# Implications = 11
+# Structural Implications = 11
+# SearchSpace Leaves = 19
+# nodes = 314
+# networks = 34
+# conflicts = 27
+
+FUNCTION: 143 = 10.00.11.11
+Iteration 8.
+  SOLUTION: Upper Bound = 6, 0s
+Iteration 7.
+  SOLUTION: Upper Bound = 5, 0s
+-----------9-----------
+       g_3          
+        |           
+       g_4          
+       / \          
+  g_5       g_6     
+  / \       / \     
+x_2  g_7  x_1  g_7  
+      |             
+     x_0            
+                    
+----------------------
+Cost: 5  Level: 4
+g_3(0): [10.00.11.11] - [--.--.--.-*] - {} - {}
+g_4(1): [01.11.00.0-] - [--.--.--.--] - {} - {}
+g_5(2): [10.10.11.1-] - [--.--.--.--] - {} - {}
+g_6(2): [11.00.11.1-] - [--.--.--.--] - {} - {}
+g_7(3): [11.11.-0.0-] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(3): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------9-----------
+time = 0 secs 
+ComputeNetwork was called 9 times
+# Branch Choices = 7
+# Implications = 5
+# Structural Implications = 5
+# SearchSpace Leaves = 9
+# nodes = 137
+# networks = 16
+# conflicts = 27
+
+FUNCTION: 150 = 10.01.01.10
+Iteration 22.
+  SOLUTION: Upper Bound = 15, 0s
+Iteration 22.
+  SOLUTION: Upper Bound = 14, 0s
+Iteration 19.
+  SOLUTION: Upper Bound = 13, 0s
+Iteration 19.
+  SOLUTION: Upper Bound = 12, 0s
+Iteration 16.
+  SOLUTION: Upper Bound = 11, 0s
+Iteration 15.
+  SOLUTION: Upper Bound = 10, 0s
+Iteration 13.
+  SOLUTION: Upper Bound = 9, 0s
+-----------166-----------
+                                g_3                 
+                                / \                 
+                 g_4                          g_10  
+                 / \                                
+    g_5                        g_6                  
+    / \                        / \                  
+x_2      g_8            g_7           g_10          
+         / \            / \           / \           
+     x_1    g_11    g_8     g_9     x_2  g_7        
+            / \             / \                     
+          x_1  x_0       x_0  g_11                  
+                                                    
+----------------------
+Cost: 9  Level: 7
+g_3(0): [10.01.01.10] - [--.--.--.--] - {} - {}
+g_4(1): [01.10.11.01] - [--.--.--.--] - {} - {}
+g_5(2): [10.11.10.10] - [--.--.--.--] - {} - {}
+g_6(2): [11.01.01.11] - [--.--.--.--] - {} - {}
+g_7(4): [00.11.11.00] - [--.--.--.--] - {} - {}
+g_8(5): [11.00.11.11] - [--.--.--.--] - {} - {}
+g_9(5): [11.11.00.11] - [--.--.--.--] - {} - {}
+g_10(3): [11.10.10.11] - [--.--.--.--] - {} - {}
+g_11(6): [11.11.11.00] - [--.--.--.--] - {} - {}
+x_0(7): [00.00.11.11]
+x_1(7): [00.11.00.11]
+x_2(4): [01.01.01.01]
+-----------166-----------
+time = 0 secs 
+ComputeNetwork was called 140 times
+# Branch Choices = 133
+# Implications = 106
+# Structural Implications = 106
+# SearchSpace Leaves = 206
+# nodes = 4535
+# networks = 339
+# conflicts = 27
+
+FUNCTION: 151 = 10.01.01.11
+Iteration 15.
+  SOLUTION: Upper Bound = 11, 0s
+Iteration 13.
+  SOLUTION: Upper Bound = 10, 0s
+Iteration 14.
+  SOLUTION: Upper Bound = 9, 0s
+-----------142-----------
+                                   g_3               
+                                   / \               
+                      g_4                      g_11  
+                      / \                            
+      g_5                              g_6           
+      / \                              / \           
+x_2         g_10                    g_7  g_10        
+             / \                                     
+     x_2             g_7                             
+                     / \                             
+              g_8           g_9                      
+              / \           / \                      
+          x_1    g_11    x_0  g_11                   
+                 / \                                 
+               x_1  x_0                              
+                                                     
+----------------------
+Cost: 9  Level: 7
+g_3(0): [10.01.01.11] - [--.--.--.--] - {} - {}
+g_4(1): [01.10.10.01] - [--.--.--.--] - {} - {}
+g_5(2): [10.11.11.10] - [--.--.--.--] - {} - {g_8}
+g_6(2): [11.01.01.11] - [--.--.--.--] - {} - {}
+g_7(4): [00.11.11.00] - [--.--.--.--] - {} - {}
+g_8(5): [11.00.11.11] - [--.--.--.--] - {} - {}
+g_9(5): [11.11.00.11] - [--.--.--.--] - {} - {}
+g_10(3): [11.10.10.11] - [--.--.--.--] - {} - {x_1}
+g_11(6): [11.11.11.00] - [--.--.--.--] - {} - {}
+x_0(7): [00.00.11.11]
+x_1(7): [00.11.00.11]
+x_2(4): [01.01.01.01]
+-----------142-----------
+time = 0 secs 
+ComputeNetwork was called 134 times
+# Branch Choices = 129
+# Implications = 110
+# Structural Implications = 108
+# SearchSpace Leaves = 179
+# nodes = 3956
+# networks = 313
+# conflicts = 30
+
+FUNCTION: 152 = 10.01.10.00
+Iteration 10.
+  SOLUTION: Upper Bound = 7, 0s
+Iteration 9.
+  SOLUTION: Upper Bound = 6, 0s
+-----------22-----------
+                  g_3              
+                  / \              
+          g_4              g_7     
+          / \              / \     
+   g_5           g_6     x_1  g_6  
+   / \           / \               
+x_2    g_8     x_1  g_5            
+       / \                         
+     x_0  x_1                      
+                                   
+----------------------
+Cost: 6  Level: 5
+g_3(0): [10.01.10.00] - [--.--.--.--] - {} - {}
+g_4(1): [01.11.01.11] - [--.--.--.--] - {} - {}
+g_5(3): [10.10.10.11] - [--.--.--.--] - {} - {}
+g_6(2): [11.01.11.00] - [--.--.--.--] - {} - {}
+g_7(1): [11.10.11.11] - [--.--.--.--] - {} - {}
+g_8(4): [11.11.11.00] - [--.--.--.--] - {} - {}
+x_0(5): [00.00.11.11]
+x_1(5): [00.11.00.11]
+x_2(4): [01.01.01.01]
+-----------22-----------
+time = 0 secs 
+ComputeNetwork was called 20 times
+# Branch Choices = 18
+# Implications = 15
+# Structural Implications = 15
+# SearchSpace Leaves = 21
+# nodes = 365
+# networks = 39
+# conflicts = 30
+
+FUNCTION: 154 = 10.01.10.10
+Iteration 13.
+  SOLUTION: Upper Bound = 9, 0s
+Iteration 14.
+  SOLUTION: Upper Bound = 8, 0s
+Iteration 8.
+  SOLUTION: Upper Bound = 6, 0s
+-----------73-----------
+               g_3            
+               / \            
+         g_4          g_7     
+         / \          / \     
+   g_5         g_6  g_5  x_2  
+   / \                        
+x_2    g_6                    
+       / \                    
+     x_1  g_8                 
+           |                  
+          x_0                 
+                              
+----------------------
+Cost: 6  Level: 5
+g_3(0): [10.01.10.10] - [--.--.--.--] - {} - {}
+g_4(1): [01.11.01.01] - [--.--.--.--] - {} - {}
+g_5(2): [10.11.10.10] - [--.--.--.--] - {} - {}
+g_6(3): [11.00.11.11] - [--.--.--.--] - {} - {}
+g_7(1): [11.10.11.11] - [--.--.--.--] - {} - {x_1}
+g_8(4): [11.11.--.00] - [--.--.--.--] - {} - {}
+x_0(5): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------73-----------
+time = 0 secs 
+ComputeNetwork was called 40 times
+# Branch Choices = 37
+# Implications = 31
+# Structural Implications = 31
+# SearchSpace Leaves = 47
+# nodes = 896
+# networks = 84
+# conflicts = 30
+
+FUNCTION: 155 = 10.01.10.11
+Iteration 9.
+  SOLUTION: Upper Bound = 7, 0s
+Iteration 9.
+  SOLUTION: Upper Bound = 6, 0s
+-----------15-----------
+                  g_3              
+                  / \              
+          g_4              g_8     
+          / \              / \     
+   g_5           g_6     x_0  x_1  
+   / \           / \               
+x_2    g_7     x_1  g_7            
+       / \                         
+     x_2  x_1                      
+                                   
+----------------------
+Cost: 6  Level: 4
+g_3(0): [10.01.10.11] - [--.--.--.--] - {} - {}
+g_4(1): [01.10.01.10] - [--.--.--.--] - {} - {}
+g_5(2): [10.11.10.11] - [--.--.--.--] - {} - {}
+g_6(2): [11.01.11.01] - [--.--.--.--] - {} - {}
+g_7(3): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_8(1): [11.11.11.00] - [--.--.--.--] - {} - {}
+x_0(2): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(4): [01.01.01.01]
+-----------15-----------
+time = 0 secs 
+ComputeNetwork was called 17 times
+# Branch Choices = 15
+# Implications = 13
+# Structural Implications = 13
+# SearchSpace Leaves = 21
+# nodes = 340
+# networks = 36
+# conflicts = 30
+
+FUNCTION: 158 = 10.01.11.10
+Iteration 14.
+  SOLUTION: Upper Bound = 9, 0s
+Iteration 11.
+  SOLUTION: Upper Bound = 8, 0s
+-----------28-----------
+                     g_3                
+                     / \                
+           g_4                  g_8     
+           / \                  / \     
+    g_5           g_6         x_0  g_7  
+    / \           / \                   
+x_2     g_9    x_1    g_7               
+        / \           / \               
+     x_1  g_10      x_2  x_1            
+           |                            
+          x_0                           
+                                        
+----------------------
+Cost: 8  Level: 5
+g_3(0): [10.01.11.10] - [--.--.--.--] - {} - {}
+g_4(1): [01.10.01.11] - [--.--.--.--] - {} - {}
+g_5(2): [10.11.10.10] - [--.--.--.--] - {} - {}
+g_6(2): [11.01.11.01] - [--.--.--.--] - {} - {}
+g_7(3): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_8(1): [11.11.00.01] - [--.--.--.--] - {} - {}
+g_9(3): [11.00.11.-1] - [--.--.--.--] - {} - {}
+g_10(4): [11.11.--.-0] - [--.--.--.--] - {} - {}
+x_0(5): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(4): [01.01.01.01]
+-----------28-----------
+time = 0 secs 
+ComputeNetwork was called 104 times
+# Branch Choices = 102
+# Implications = 90
+# Structural Implications = 90
+# SearchSpace Leaves = 138
+# nodes = 2672
+# networks = 244
+# conflicts = 34
+
+FUNCTION: 159 = 10.01.11.11
+Iteration 8.
+  SOLUTION: Upper Bound = 7, 0s
+Iteration 8.
+  SOLUTION: Upper Bound = 6, 0s
+-----------10-----------
+                 g_3          
+                 / \          
+          g_4            g_8  
+          / \             |   
+   g_5           g_6     x_0  
+   / \           / \          
+x_2    g_7     x_1  g_7       
+       / \                    
+     x_2  x_1                 
+                              
+----------------------
+Cost: 6  Level: 4
+g_3(0): [10.01.11.11] - [--.--.--.--] - {} - {}
+g_4(1): [01.10.01.10] - [--.--.--.--] - {} - {}
+g_5(2): [10.11.10.11] - [--.--.--.--] - {} - {}
+g_6(2): [11.01.11.01] - [--.--.--.--] - {} - {}
+g_7(3): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_8(1): [11.11.-0.0-] - [--.--.--.--] - {} - {}
+x_0(2): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(4): [01.01.01.01]
+-----------10-----------
+time = 0 secs 
+ComputeNetwork was called 13 times
+# Branch Choices = 11
+# Implications = 12
+# Structural Implications = 12
+# SearchSpace Leaves = 13
+# nodes = 224
+# networks = 24
+# conflicts = 34
+
+FUNCTION: 168 = 10.10.10.00
+Iteration 5.
+  SOLUTION: Upper Bound = 4, 0s
+-----------4-----------
+   g_3         
+    |          
+   g_4         
+   / \         
+g_5    g_6     
+ |     / \     
+x_2  x_0  x_1  
+               
+----------------------
+Cost: 4  Level: 3
+g_3(0): [10.10.10.00] - [--.--.--.--] - {} - {}
+g_4(1): [01.01.01.11] - [--.--.--.--] - {} - {}
+g_5(2): [10.10.10.1-] - [--.--.--.--] - {} - {}
+g_6(2): [11.11.11.00] - [--.--.--.--] - {} - {}
+x_0(3): [00.00.11.11]
+x_1(3): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------4-----------
+time = 0 secs 
+ComputeNetwork was called 5 times
+# Branch Choices = 4
+# Implications = 3
+# Structural Implications = 3
+# SearchSpace Leaves = 5
+# nodes = 69
+# networks = 9
+# conflicts = 34
+
+FUNCTION: 169 = 10.10.10.01
+Iteration 10.
+  SOLUTION: Upper Bound = 7, 0s
+Iteration 8.
+  SOLUTION: Upper Bound = 6, 0s
+Iteration 8.
+  SOLUTION: Upper Bound = 5, 0s
+-----------16-----------
+               g_3            
+               / \            
+         g_4          g_7     
+         / \          / \     
+   g_5         g_6  x_2  g_5  
+   / \                        
+x_2    g_6                    
+       / \                    
+     x_0  x_1                 
+                              
+----------------------
+Cost: 5  Level: 4
+g_3(0): [10.10.10.01] - [--.--.--.--] - {} - {}
+g_4(1): [01.01.01.11] - [--.--.--.--] - {} - {}
+g_5(2): [10.10.10.11] - [--.--.--.--] - {} - {}
+g_6(3): [11.11.11.00] - [--.--.--.--] - {} - {}
+g_7(1): [11.11.11.10] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------16-----------
+time = 0 secs 
+ComputeNetwork was called 13 times
+# Branch Choices = 10
+# Implications = 5
+# Structural Implications = 5
+# SearchSpace Leaves = 13
+# nodes = 209
+# networks = 23
+# conflicts = 34
+
+FUNCTION: 171 = 10.10.10.11
+Iteration 4.
+  SOLUTION: Upper Bound = 2, 0s
+-----------3-----------
+      g_3      
+      / \      
+  g_4     x_2  
+  / \          
+x_0  x_1       
+               
+----------------------
+Cost: 2  Level: 2
+g_3(0): [10.10.10.11] - [--.--.--.--] - {} - {}
+g_4(1): [11.11.11.00] - [--.--.--.--] - {} - {}
+x_0(2): [00.00.11.11]
+x_1(2): [00.11.00.11]
+x_2(1): [01.01.01.01]
+-----------3-----------
+time = 0 secs 
+ComputeNetwork was called 4 times
+# Branch Choices = 3
+# Implications = 1
+# Structural Implications = 1
+# SearchSpace Leaves = 4
+# nodes = 41
+# networks = 7
+# conflicts = 34
+
+FUNCTION: 172 = 10.10.11.00
+Iteration 7.
+  SOLUTION: Upper Bound = 5, 0s
+-----------6-----------
+       g_3          
+        |           
+       g_4          
+       / \          
+  g_5       g_6     
+  / \       / \     
+x_2  g_7  x_0  x_1  
+      |             
+     x_0            
+                    
+----------------------
+Cost: 5  Level: 4
+g_3(0): [10.10.11.00] - [--.--.--.--] - {} - {}
+g_4(1): [01.01.00.11] - [--.--.--.--] - {} - {}
+g_5(2): [10.10.11.1-] - [--.--.--.--] - {} - {}
+g_6(2): [11.11.11.00] - [--.--.--.--] - {} - {}
+g_7(3): [11.11.-0.--] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(3): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------6-----------
+time = 0 secs 
+ComputeNetwork was called 8 times
+# Branch Choices = 7
+# Implications = 7
+# Structural Implications = 7
+# SearchSpace Leaves = 9
+# nodes = 130
+# networks = 16
+# conflicts = 34
+
+FUNCTION: 173 = 10.10.11.01
+Iteration 7.
+  SOLUTION: Upper Bound = 5, 0s
+-----------6-----------
+          g_3            
+          / \            
+   g_4           g_7     
+   / \           / \     
+g_5    g_6     x_2  x_0  
+ |     / \               
+x_2  x_0  x_1            
+                         
+----------------------
+Cost: 5  Level: 3
+g_3(0): [10.10.11.01] - [--.--.--.--] - {} - {}
+g_4(1): [01.01.0-.11] - [--.--.--.--] - {} - {}
+g_5(2): [10.10.1-.1-] - [--.--.--.--] - {} - {}
+g_6(2): [11.11.11.00] - [--.--.--.--] - {} - {}
+g_7(1): [11.11.10.10] - [--.--.--.--] - {} - {}
+x_0(3): [00.00.11.11]
+x_1(3): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------6-----------
+time = 0 secs 
+ComputeNetwork was called 8 times
+# Branch Choices = 7
+# Implications = 7
+# Structural Implications = 7
+# SearchSpace Leaves = 10
+# nodes = 140
+# networks = 17
+# conflicts = 34
+
+FUNCTION: 174 = 10.10.11.10
+Iteration 4.
+  SOLUTION: Upper Bound = 3, 0s
+-----------3-----------
+      g_3      
+      / \      
+  g_4     x_2  
+  / \          
+g_5  x_0       
+ |             
+x_1            
+               
+----------------------
+Cost: 3  Level: 3
+g_3(0): [10.10.11.10] - [--.--.--.--] - {} - {}
+g_4(1): [11.11.00.-1] - [--.--.--.--] - {} - {}
+g_5(2): [11.--.11.-0] - [--.--.--.--] - {} - {}
+x_0(2): [00.00.11.11]
+x_1(3): [00.11.00.11]
+x_2(1): [01.01.01.01]
+-----------3-----------
+time = 0 secs 
+ComputeNetwork was called 4 times
+# Branch Choices = 3
+# Implications = 2
+# Structural Implications = 2
+# SearchSpace Leaves = 4
+# nodes = 48
+# networks = 7
+# conflicts = 34
+
+FUNCTION: 188 = 10.11.11.00
+Iteration 8.
+  SOLUTION: Upper Bound = 7, 0s
+Iteration 8.
+  SOLUTION: Upper Bound = 6, 0s
+-----------11-----------
+              g_3             
+              / \             
+       g_4            g_8     
+       / \            / \     
+  g_5       g_6     x_0  g_6  
+  / \       / \               
+x_2  g_7  x_0  x_1            
+      |                       
+     x_1                      
+                              
+----------------------
+Cost: 6  Level: 4
+g_3(0): [10.11.11.00] - [--.--.--.--] - {} - {}
+g_4(1): [01.00.01.11] - [--.--.--.--] - {} - {}
+g_5(2): [10.11.10.1-] - [--.--.--.--] - {} - {}
+g_6(2): [11.11.11.00] - [--.--.--.--] - {} - {}
+g_7(3): [11.-0.11.--] - [--.--.--.--] - {} - {}
+g_8(1): [11.11.00.11] - [--.--.--.--] - {} - {}
+x_0(3): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------11-----------
+time = 0 secs 
+ComputeNetwork was called 13 times
+# Branch Choices = 11
+# Implications = 9
+# Structural Implications = 9
+# SearchSpace Leaves = 14
+# nodes = 232
+# networks = 25
+# conflicts = 34
+
+FUNCTION: 189 = 10.11.11.01
+Iteration 8.
+  SOLUTION: Upper Bound = 6, 0s
+-----------7-----------
+              g_3             
+              / \             
+       g_4            g_8     
+       / \            / \     
+  g_5       g_6     x_0  x_2  
+  / \       / \               
+x_2  g_7  x_0  x_1            
+      |                       
+     x_1                      
+                              
+----------------------
+Cost: 6  Level: 4
+g_3(0): [10.11.11.01] - [--.--.--.--] - {} - {}
+g_4(1): [01.00.01.11] - [--.--.--.--] - {} - {}
+g_5(2): [10.11.10.1-] - [--.--.--.--] - {} - {}
+g_6(2): [11.11.11.00] - [--.--.--.--] - {} - {}
+g_7(3): [11.-0.11.--] - [--.--.--.--] - {} - {}
+g_8(1): [11.11.10.10] - [--.--.--.--] - {} - {}
+x_0(3): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------7-----------
+time = 0 secs 
+ComputeNetwork was called 11 times
+# Branch Choices = 10
+# Implications = 9
+# Structural Implications = 9
+# SearchSpace Leaves = 13
+# nodes = 209
+# networks = 23
+# conflicts = 34
+
+FUNCTION: 190 = 10.11.11.10
+Iteration 9.
+  SOLUTION: Upper Bound = 7, 0s
+Iteration 9.
+  SOLUTION: Upper Bound = 6, 0s
+-----------11-----------
+            g_3               
+            / \               
+      g_4         g_6         
+      / \          |          
+  g_5     x_1     g_7         
+  / \             / \         
+x_0  x_1       x_2    g_8     
+                      / \     
+                    x_0  g_5  
+                              
+----------------------
+Cost: 6  Level: 5
+g_3(0): [10.11.11.10] - [--.--.--.--] - {} - {}
+g_4(1): [11.00.11.11] - [--.--.--.--] - {} - {}
+g_5(4): [11.11.11.00] - [--.--.--.--] - {} - {}
+g_6(1): [01.-1.00.01] - [--.--.--.--] - {} - {}
+g_7(2): [10.10.11.10] - [--.--.--.--] - {} - {}
+g_8(3): [11.11.00.11] - [--.--.--.--] - {} - {}
+x_0(5): [00.00.11.11]
+x_1(5): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------11-----------
+time = 0 secs 
+ComputeNetwork was called 18 times
+# Branch Choices = 16
+# Implications = 11
+# Structural Implications = 11
+# SearchSpace Leaves = 19
+# nodes = 324
+# networks = 35
+# conflicts = 34
+
+FUNCTION: 191 = 10.11.11.11
+Iteration 4.
+  SOLUTION: Upper Bound = 5, 0s
+-----------3-----------
+   g_3         
+   / \         
+g_4    g_5     
+ |      |      
+x_1    g_6     
+       / \     
+     g_7  x_2  
+      |        
+     x_0       
+               
+----------------------
+Cost: 5  Level: 4
+g_3(0): [10.11.11.11] - [--.*-.--.**] - {} - {}
+g_4(1): [11.-0.11.--] - [--.--.--.--] - {} - {}
+g_5(1): [01.-1.00.--] - [--.--.--.--] - {} - {}
+g_6(2): [10.10.11.1-] - [--.--.--.--] - {} - {}
+g_7(3): [11.11.-0.--] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(2): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------3-----------
+time = 0 secs 
+ComputeNetwork was called 6 times
+# Branch Choices = 5
+# Implications = 6
+# Structural Implications = 6
+# SearchSpace Leaves = 6
+# nodes = 90
+# networks = 11
+# conflicts = 34
+
+FUNCTION: 232 = 11.10.10.00
+Iteration 8.
+  SOLUTION: Upper Bound = 7, 0s
+-----------7-----------
+       g_3               
+        |                
+       g_4               
+       / \               
+  g_5        g_6         
+  / \        / \         
+x_1  x_2  x_0    g_7     
+                 / \     
+               g_8  g_9  
+                |    |   
+               x_2  x_1  
+                         
+----------------------
+Cost: 7  Level: 5
+g_3(0): [11.10.10.00] - [--.--.--.--] - {} - {}
+g_4(1): [00.01.01.11] - [--.--.--.--] - {} - {}
+g_5(2): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_6(2): [11.11.10.0-] - [--.--.--.--] - {} - {}
+g_7(3): [0-.--.01.1-] - [--.--.--.--] - {} - {}
+g_8(4): [1-.1-.10.1-] - [--.--.--.--] - {} - {}
+g_9(4): [11.--.11.0-] - [--.--.--.--] - {} - {}
+x_0(3): [00.00.11.11]
+x_1(5): [00.11.00.11]
+x_2(5): [01.01.01.01]
+-----------7-----------
+time = 0 secs 
+ComputeNetwork was called 36 times
+# Branch Choices = 35
+# Implications = 33
+# Structural Implications = 33
+# SearchSpace Leaves = 45
+# nodes = 812
+# networks = 82
+# conflicts = 36
+
+FUNCTION: 233 = 11.10.10.01
+Iteration 16.
+  SOLUTION: Upper Bound = 10, 0s
+Iteration 16.
+  SOLUTION: Upper Bound = 9, 0s
+Iteration 11.
+  SOLUTION: Upper Bound = 8, 0s
+-----------117-----------
+                       g_3                   
+                       / \                   
+         g_4                         g_7     
+         / \                         / \     
+  g_5           g_6                x_0  g_6  
+  / \           / \                          
+x_1  x_2  x_0         g_8                    
+                      / \                    
+                 g_9       g_10              
+                 / \       / \               
+               x_2  g_5  x_1  g_5            
+                                             
+----------------------
+Cost: 8  Level: 6
+g_3(0): [11.10.10.01] - [--.--.--.--] - {} - {}
+g_4(1): [00.01.01.11] - [--.--.--.--] - {} - {}
+g_5(5): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_6(2): [11.11.10.01] - [--.--.--.--] - {} - {}
+g_7(1): [11.11.01.10] - [--.--.--.--] - {} - {}
+g_8(3): [01.10.01.10] - [--.--.--.--] - {} - {}
+g_9(4): [10.11.10.11] - [--.--.--.--] - {} - {}
+g_10(4): [11.01.11.01] - [--.--.--.--] - {} - {}
+x_0(3): [00.00.11.11]
+x_1(6): [00.11.00.11]
+x_2(6): [01.01.01.01]
+-----------117-----------
+time = 0 secs 
+ComputeNetwork was called 200 times
+# Branch Choices = 187
+# Implications = 179
+# Structural Implications = 169
+# SearchSpace Leaves = 240
+# nodes = 5013
+# networks = 445
+# conflicts = 49
+
+FUNCTION: 234 = 11.10.10.10
+Iteration 7.
+  SOLUTION: Upper Bound = 4, 0s
+-----------6-----------
+       g_3          
+        |           
+       g_4          
+       / \          
+  g_5       g_6     
+  / \       / \     
+x_1  x_2  x_0  x_2  
+                    
+----------------------
+Cost: 4  Level: 3
+g_3(0): [11.10.10.10] - [--.--.--.--] - {} - {}
+g_4(1): [00.01.01.01] - [--.--.--.--] - {} - {}
+g_5(2): [11.10.11.10] - [--.--.--.--] - {} - {}
+g_6(2): [11.11.10.10] - [--.--.--.--] - {} - {}
+x_0(3): [00.00.11.11]
+x_1(3): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------6-----------
+time = 0 secs 
+ComputeNetwork was called 7 times
+# Branch Choices = 6
+# Implications = 3
+# Structural Implications = 3
+# SearchSpace Leaves = 9
+# nodes = 115
+# networks = 15
+# conflicts = 49
+
+FUNCTION: 235 = 11.10.10.11
+Iteration 8.
+  SOLUTION: Upper Bound = 6, 0s
+Iteration 8.
+  SOLUTION: Upper Bound = 5, 0s
+-----------12-----------
+                 g_3          
+                 / \          
+          g_4            x_2  
+          / \                 
+   g_5           g_6          
+   / \           / \          
+x_1    g_7     x_0  g_7       
+       / \                    
+     x_1  x_0                 
+                              
+----------------------
+Cost: 5  Level: 4
+g_3(0): [11.10.10.11] - [--.--.--.--] - {} - {}
+g_4(1): [00.11.11.00] - [--.--.--.--] - {} - {}
+g_5(2): [11.00.11.11] - [--.--.--.--] - {} - {}
+g_6(2): [11.11.00.11] - [--.--.--.--] - {} - {}
+g_7(3): [11.11.11.00] - [--.--.--.--] - {} - {}
+x_0(4): [00.00.11.11]
+x_1(4): [00.11.00.11]
+x_2(1): [01.01.01.01]
+-----------12-----------
+time = 0 secs 
+ComputeNetwork was called 11 times
+# Branch Choices = 9
+# Implications = 5
+# Structural Implications = 5
+# SearchSpace Leaves = 10
+# nodes = 167
+# networks = 19
+# conflicts = 49
+
+FUNCTION: 239 = 11.10.11.11
+Iteration 4.
+  SOLUTION: Upper Bound = 4, 0s
+-----------3-----------
+   g_3         
+   / \         
+g_4    g_5     
+ |      |      
+x_0    g_6     
+       / \     
+     x_1  x_2  
+               
+----------------------
+Cost: 4  Level: 3
+g_3(0): [11.10.11.11] - [--.--.**.*-] - {} - {}
+g_4(1): [11.11.--.-0] - [--.--.--.--] - {} - {}
+g_5(1): [00.01.--.-1] - [--.--.--.--] - {} - {}
+g_6(2): [11.10.11.10] - [--.--.--.--] - {} - {}
+x_0(2): [00.00.11.11]
+x_1(3): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------3-----------
+time = 0 secs 
+ComputeNetwork was called 4 times
+# Branch Choices = 3
+# Implications = 4
+# Structural Implications = 4
+# SearchSpace Leaves = 4
+# nodes = 52
+# networks = 7
+# conflicts = 49
+
+FUNCTION: 254 = 11.11.11.10
+Iteration 4.
+  SOLUTION: Upper Bound = 3, 0s
+-----------3-----------
+   g_3         
+   / \         
+x_0    g_4     
+        |      
+       g_5     
+       / \     
+     x_1  x_2  
+               
+----------------------
+Cost: 3  Level: 3
+g_3(0): [11.11.11.10] - [--.--.--.--] - {} - {}
+g_4(1): [--.-1.00.01] - [--.--.--.--] - {} - {}
+g_5(2): [11.10.11.10] - [--.--.--.--] - {} - {}
+x_0(1): [00.00.11.11]
+x_1(3): [00.11.00.11]
+x_2(3): [01.01.01.01]
+-----------3-----------
+time = 0 secs 
+ComputeNetwork was called 4 times
+# Branch Choices = 3
+# Implications = 3
+# Structural Implications = 3
+# SearchSpace Leaves = 4
+# nodes = 45
+# networks = 7
+# conflicts = 49
+
+This program took 1 secs to complete.
+This program made 2415 calls to ComputeNetwork.
+This program has 2261 branch points in the search space.
+This program has 1980 implication points in the search space.
+This program has 1960 structural implication points in the search space.
+This program has 3028 leaf points in the search space.
+This program used 61782 nodes.
+This program used 5353 networks.
+Fan-in: 2; MintermChoice: H; Structrual Implication: 1; Symmetry: 1; Gate Symmetry: 1; Duplicate Cover: 1; Network Order: B; New Bridge: 0; Simple Bridge: 1; Relax Version : A; Relax Constant: 400; Relax %: 0.01; Stop Time: 172800
+
